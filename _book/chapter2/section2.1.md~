@@ -219,4 +219,7 @@ Check the tftp server status:
 udp        0      0 0.0.0.0:69                  0.0.0.0:*                               1488/xinetd         
 ```
 
+### End Of This Section
+During this section we have installed and configure the Cobbler Server, now all of the service are enabled in Cobbler Server. 
+
 Now our Cobbler server is ready for serving PXE deployment, in next section we will introduce the ISO for really deployment. 

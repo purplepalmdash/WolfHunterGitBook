@@ -1,28 +1,22 @@
 <!DOCTYPE HTML>
-<html lang="en" >
+<html lang="en-US" >
     
     <head>
         
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Network Environment | Introduction</title>
+        <title>Network Environment | Use Cobbler And Ansible For Deploying CloudStack</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.1.0">
-        
-        
+        <meta name="generator" content="GitBook 0.7.0">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
-    <link rel="stylesheet" href="../gitbook/style.css">
     
     
-
-        
+    <meta name="author" content="purplepalmdash">
     
     
     <link rel="next" href="../chapter1/section1.3.html" />
@@ -36,45 +30,126 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-basepath=".." data-revision="Mon Jul 20 2015 18:18:39 GMT+0800 (CST)">
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-github="purplepalmdash/WolfHunterGitBook" data-level="1.2" data-basepath=".." data-revision="1437402678945">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/purplepalmdash/WolfHunterGitBook" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Use Cobbler And Ansible For Deploying CloudStack</a>
+    </h1>
+</div>
+
     
 
 <div class="book-summary">
     <div class="book-search">
-        <input type="text" placeholder="Type to search" class="form-control" />
+        <input type="text" placeholder="Search" class="form-control" />
     </div>
     <ul class="summary">
         
         
         
+        <li>
+            <a href="https://github.com/purplepalmdash" target="blank" class="author-link">About the author</a>
+        </li>
         
 
+        
+        
+        <li>
+            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/issues" target="blank" class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        
+        <li>
+            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/edit/master/chapter1/section1.2.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+	
+
+        
+        <li class="divider"></li>
         
 
         
     
+        
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                         Introduction
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="1" data-path="chapter1/index.html">
+        
+        <li class="chapter " data-level="1" data-path="chapter1/README.html">
             
                 
-                    <a href="../chapter1/index.html">
+                    <a href="../chapter1/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
                         
-                        Environment
+                         Environment
                     </a>
                 
             
@@ -82,6 +157,7 @@
             <ul class="articles">
                 
     
+        
         <li class="chapter " data-level="1.1" data-path="chapter1/section1.1.html">
             
                 
@@ -90,13 +166,14 @@
                         
                             <b>1.1.</b>
                         
-                        ISOs
+                         ISOs
                     </a>
                 
             
             
         </li>
     
+        
         <li class="chapter active" data-level="1.2" data-path="chapter1/section1.2.html">
             
                 
@@ -105,13 +182,14 @@
                         
                             <b>1.2.</b>
                         
-                        Network Environment
+                         Network Environment
                     </a>
                 
             
             
         </li>
     
+        
         <li class="chapter " data-level="1.3" data-path="chapter1/section1.3.html">
             
                 
@@ -120,13 +198,14 @@
                         
                             <b>1.3.</b>
                         
-                        WolfHunter Root Machine
+                         WolfHunter Root Machine
                     </a>
                 
             
             
         </li>
     
+        
         <li class="chapter " data-level="1.4" data-path="chapter1/section1.4.html">
             
                 
@@ -135,7 +214,7 @@
                         
                             <b>1.4.</b>
                         
-                        Check Installation
+                         Check Installation
                     </a>
                 
             
@@ -147,15 +226,16 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="chapter2/index.html">
+        
+        <li class="chapter " data-level="2" data-path="chapter2/README.html">
             
                 
-                    <a href="../chapter2/index.html">
+                    <a href="../chapter2/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
                         
-                        Cobber Server
+                         Cobber Server
                     </a>
                 
             
@@ -163,6 +243,7 @@
             <ul class="articles">
                 
     
+        
         <li class="chapter " data-level="2.1" data-path="chapter2/section2.1.html">
             
                 
@@ -171,13 +252,14 @@
                         
                             <b>2.1.</b>
                         
-                        Setup Cobbler Server
+                         Setup Cobbler Server
                     </a>
                 
             
             
         </li>
     
+        
         <li class="chapter " data-level="2.2" data-path="chapter2/section2.2.html">
             
                 
@@ -186,7 +268,39 @@
                         
                             <b>2.2.</b>
                         
-                        Cobbler Web
+                         Cobbler Web
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3" data-path="chapter2/section2.3.html">
+            
+                
+                    <a href="../chapter2/section2.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                         Import ISOs
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.4" data-path="chapter2/section2.4.html">
+            
+                
+                    <a href="../chapter2/section2.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                         Deploy Your First Node
                     </a>
                 
             
@@ -198,18 +312,57 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="chapter3/index.html">
+        
+        <li class="chapter " data-level="3" data-path="chapter3/README.html">
             
                 
-                    <a href="../chapter3/index.html">
+                    <a href="../chapter3/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.</b>
                         
-                        Chapter3
+                         Ansible
                     </a>
                 
             
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="chapter3/section3.1.html">
+            
+                
+                    <a href="../chapter3/section3.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                         Setup Ansible Node
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.2" data-path="chapter3/section3.2.html">
+            
+                
+                    <a href="../chapter3/section3.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                         Powerful Playbooks
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -218,9 +371,7 @@
         
         <li class="divider"></li>
         <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
         </li>
         
     </ul>
@@ -228,95 +379,47 @@
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
-    <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
-    
-    <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="buttons">
-        <button type="button" id="reduce-font-size" class="button size-2">A</button>
-        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
-    </div>
-
-    <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
-    </div>
-
-    <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
-    </div>
-</div>
-
-    </div>
-
-    <!-- Actions Right -->
-    
-    <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
-        </a>
-        <div class="dropdown-menu font-settings dropdown-left">
-            <div class="dropdown-caret">
-                <span class="caret-outer"></span>
-                <span class="caret-inner"></span>
-            </div>
-            <div class="buttons">
-                <button type="button" data-sharing="twitter" class="button">
-                    Share on Twitter
-                </button>
-                <button type="button" data-sharing="google-plus" class="button">
-                    Share on Google
-                </button>
-                <button type="button" data-sharing="facebook" class="button">
-                    Share on Facebook
-                </button>
-                <button type="button" data-sharing="weibo" class="button">
-                    Share on Weibo
-                </button>
-                <button type="button" data-sharing="instapaper" class="button">
-                    Share on Instapaper
-                </button>
-            </div>
-        </div>
-    </div>
-    
-
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
-    
-
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Introduction</a>
-    </h1>
-</div>
-
             <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 23.076923076923077%;min-width: 15.384615384615385%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chapter1/README.html" title="Environment" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
+    
+        <a href="../chapter1/section1.1.html" title="ISOs" class="chapter done " data-progress="1.1" style="left: 15.384615384615385%;"></a>
+    
+        <a href="../chapter1/section1.2.html" title="Network Environment" class="chapter done " data-progress="1.2" style="left: 23.076923076923077%;"></a>
+    
+        <a href="../chapter1/section1.3.html" title="WolfHunter Root Machine" class="chapter  " data-progress="1.3" style="left: 30.76923076923077%;"></a>
+    
+        <a href="../chapter1/section1.4.html" title="Check Installation" class="chapter  " data-progress="1.4" style="left: 38.46153846153846%;"></a>
+    
+        <a href="../chapter2/README.html" title="Cobber Server" class="chapter  new-chapter" data-progress="2" style="left: 46.15384615384615%;"></a>
+    
+        <a href="../chapter2/section2.1.html" title="Setup Cobbler Server" class="chapter  " data-progress="2.1" style="left: 53.84615384615385%;"></a>
+    
+        <a href="../chapter2/section2.2.html" title="Cobbler Web" class="chapter  " data-progress="2.2" style="left: 61.53846153846154%;"></a>
+    
+        <a href="../chapter2/section2.3.html" title="Import ISOs" class="chapter  " data-progress="2.3" style="left: 69.23076923076923%;"></a>
+    
+        <a href="../chapter2/section2.4.html" title="Deploy Your First Node" class="chapter  " data-progress="2.4" style="left: 76.92307692307692%;"></a>
+    
+        <a href="../chapter3/README.html" title="Ansible" class="chapter  new-chapter" data-progress="3" style="left: 84.61538461538461%;"></a>
+    
+        <a href="../chapter3/section3.1.html" title="Setup Ansible Node" class="chapter  " data-progress="3.1" style="left: 92.3076923076923%;"></a>
+    
+        <a href="../chapter3/section3.2.html" title="Powerful Playbooks" class="chapter  " data-progress="3.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
                 <div class="page-inner">
                 
-                
-                    <section class="normal" id="section-">
+                    <section class="normal" id="section-gitbook_200">
                     
                         <h2 id="network-preparation">Network Preparation</h2>
 <p>WolfHunter will acts as a deployment administrator in the whole network, so the first step for setting up the WolfHunter Dev/Test Env is to setup the Network.    </p>
@@ -331,15 +434,14 @@
 <li><strong>External</strong>: 10.15.34.0/24</li>
 </ul>
 <h3 id="wolfhunter-inner-network">WolfHunter Inner Network</h3>
-<p>Open virt-manager, double-click localhost(QEMU):<br><img src="../images/2015_07_20_15_16_52_344x139.jpg" alt="/images/2015_07_20_15_16_52_344x139.jpg"><br>Choose &quot;Virtual Networks&quot; tab:<br><img src="../images/2015_07_20_15_18_42_421x63.jpg" alt="/images/2015_07_20_15_18_42_421x63.jpg"><br>Click the &quot;+&quot;, and named your virtual network name:<br><img src="../images/2015_07_20_15_21_24_518x476.jpg" alt="/images/2015_07_20_15_21_24_518x476.jpg"><br>Set the IP Address and Disable the DHCP, we disabled the DHCP now because later our deployed Cobbler Server will manage this network DHCP:<br><img src="../images/2015_07_20_15_33_36_514x409.jpg" alt="/images/2015_07_20_15_33_36_514x409.jpg"><br>Directly click &quot;Forward&quot; for next step:<br><img src="../images/2015_07_20_15_36_57_514x415.jpg" alt="/images/2015_07_20_15_36_57_514x415.jpg"><br>Choose &quot;isolated network&quot; then click &quot;Finish&quot;:<br><img src="../images/2015_07_20_15_38_47_514x415.jpg" alt="/images/2015_07_20_15_38_47_514x415.jpg">   </p>
+<p>Open virt-manager, double-click localhost(QEMU):<br><img src="/images/2015_07_20_15_16_52_344x139.jpg" alt="/images/2015_07_20_15_16_52_344x139.jpg"><br>Choose &quot;Virtual Networks&quot; tab:<br><img src="/images/2015_07_20_15_18_42_421x63.jpg" alt="/images/2015_07_20_15_18_42_421x63.jpg"><br>Click the &quot;+&quot;, and named your virtual network name:<br><img src="/images/2015_07_20_15_21_24_518x476.jpg" alt="/images/2015_07_20_15_21_24_518x476.jpg"><br>Set the IP Address and Disable the DHCP, we disabled the DHCP now because later our deployed Cobbler Server will manage this network DHCP:<br><img src="/images/2015_07_20_15_33_36_514x409.jpg" alt="/images/2015_07_20_15_33_36_514x409.jpg"><br>Directly click &quot;Forward&quot; for next step:<br><img src="/images/2015_07_20_15_36_57_514x415.jpg" alt="/images/2015_07_20_15_36_57_514x415.jpg"><br>Choose &quot;isolated network&quot; then click &quot;Finish&quot;:<br><img src="/images/2015_07_20_15_38_47_514x415.jpg" alt="/images/2015_07_20_15_38_47_514x415.jpg">   </p>
 <h3 id="wolfhunter-external-network">WolfHunter External Network</h3>
 <p>The steps are mainly the same, but with some minor modifications. 
-Define the name:<br><img src="../images/2015_07_20_15_45_47_511x440.jpg" alt="/images/2015_07_20_15_45_47_511x440.jpg"><br>Enable DHCP, because this is external network, so we let host machine managing the whole network&apos;s DHCP:<br><img src="../images/2015_07_20_15_46_13_511x439.jpg" alt="/images/2015_07_20_15_46_13_511x439.jpg"><br>Choose &quot;Forwarding to ...&quot; thus you have internet connection in this network:<br><img src="../images/2015_07_20_15_46_28_511x438.jpg" alt="/images/2015_07_20_15_46_28_511x438.jpg">    </p>
+Define the name:<br><img src="/images/2015_07_20_15_45_47_511x440.jpg" alt="/images/2015_07_20_15_45_47_511x440.jpg"><br>Enable DHCP, because this is external network, so we let host machine managing the whole network&#39;s DHCP:<br><img src="/images/2015_07_20_15_46_13_511x439.jpg" alt="/images/2015_07_20_15_46_13_511x439.jpg"><br>Choose &quot;Forwarding to ...&quot; thus you have internet connection in this network:<br><img src="/images/2015_07_20_15_46_28_511x438.jpg" alt="/images/2015_07_20_15_46_28_511x438.jpg">    </p>
 <p>Until now we have setup the Network Environment of the WolfHunter, with this pre-defined networking, we could continue to next step for settting up the cobbler server.    </p>
 
                     
                     </section>
-                
                 
                 </div>
             </div>
@@ -355,7 +457,16 @@ Define the name:<br><img src="../images/2015_07_20_15_45_47_511x440.jpg" alt="/i
 </div>
 
         
+<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
 <script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
 
     
     <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
@@ -363,7 +474,7 @@ Define the name:<br><img src="../images/2015_07_20_15_45_47_511x440.jpg" alt="/i
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {};
     gitbook.start(config);
 });
 </script>
