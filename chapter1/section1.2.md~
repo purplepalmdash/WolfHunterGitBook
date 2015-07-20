@@ -1,0 +1,3 @@
+## WolfHunter Root Machine
+We name the first deployed machine "Root Machine", because this machine is firstly introduced to the whole deployment environment, this machine acts as PXE Server, which will deploy all of the later added machine, and it holds all of the WolfHunter Ansible scripts which are used for deploying CloudStack environment.   
+ 
