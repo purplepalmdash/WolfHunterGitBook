@@ -1,0 +1,45 @@
+## Node Static IP
+Use Static IP could easily remember the deployment parameter, so before we really deploy the nodes, we setup the static IP in Inner Network.     
+
+### Change Cobbler's DHCP Setting
+Cobbler managed the inner network's DHCP, now we played some tricks for letting the IP address pool releases more Static IP adresses for configuration.    
+
+In Cobbler Server:   
+
+```
+# vim /etc/cobbler/dhcp.template
+     range dynamic-bootp        10.15.33.100 10.15.33.254;
+# cobbler sync
+```
+Check the dhcpd's configuration file:  
+
+```
+# cat /etc/dhcp/dhcpd.conf
+....
+     range dynamic-bootp        10.15.33.100 10.15.33.254;
+```
+So now the 10.15.33.3~ 10.15.33.99 is for static IP Address ranges.   
+
+### Change CS Management 's IP 
+
+```
+# vim /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE="eth0"
+- BOOTPROTO="dhcp"
++ BOOTPROTO="static"
++ IPADDR="10.15.33.5"
+```
+
+### Change CS Agent 's IP 
+
+```
+# vim /etc/sysconfig/network-scripts/ifcfg-eth1 
+- BOOTPROTO=dhcp
++ BOOTPROTO=static
++ IPADDR=10.15.33.6
+```
+
+### End Of This Section
+By assigning the static IP Address, we could more precisely control the deployment.  
+
+Later in Cobbler advance topic we will introduce to use Cobbler's rules for controlling the DHCP's fixed IP Address. Now we use static IP Address for next deployment.       

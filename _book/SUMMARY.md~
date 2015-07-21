@@ -17,6 +17,8 @@ This is the structure for "Book".
 	* [Powerful Playbooks](chapter3/section3.2.md)
 * [Deploy CloudStack(Manual)](chapter4/README.md)
 	* [Node Preparation](chapter4/section4.1.md)
+	* [Node Static IP](chapter4/section4.2.md)
+	* [CloudStack Management](chapter4/section4.3.md)
 * [Deploy CloudStack(The Ansible Way)](chapter5/README.md)
 * [Easier Your Deployment](chapter6/README.md)
 * [Combine Cobbler and Ansible](chapter7/README.md)
