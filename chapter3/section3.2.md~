@@ -66,3 +66,183 @@ We won't spend more time on playbooks' syntax, if you want to dive into its synt
 
 ### NTP Playbooks
 
+#### Install NTP Service
+
+Edit the ntp installation playbook like following:    
+
+```
+# vim ~/Code/Ansible/ntp-install.yml
+---
+- hosts: all
+  sudo: yes
+  gather_facts: yes
+
+  tasks:
+
+  - name: install ntp
+    yum: name=ntp state=installed update_cache=yes
+    when: ansible_os_family == "RedHat"
+
+  - name: start ntp
+    service: name=ntpd state=started enabled=true
+    when: ansible_os_family == "RedHat"
+```
+
+Deploy it via:   
+
+```
+# ansible-playbook ntp-install.yml
+
+PLAY [all] ******************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [10.15.33.5]
+
+TASK: [install ntp] *********************************************************** 
+ok: [10.15.33.5]
+
+TASK: [start ntp] ************************************************************* 
+changed: [10.15.33.5]
+
+PLAY RECAP ******************************************************************** 
+10.15.33.5                 : ok=3    changed=1    unreachable=0    failed=0   
+```
+
+Check the result on 10.15.33.5:    
+
+```
+# ps -ef | grep ntp
+root     20887     1  0 02:25 ?        00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+```
+
+#### Configure NTP Service
+Use playbooks we could configure the installed service, since sometimes we need to configure the ntpd qeury server, we could do this via ansible-playbook.   
+
+Add the ntp configuration file:    
+
+```
+# mkdir ~/Code/Ansible/files
+# vim ~/Code/Ansible/files/ntp.conf
+driftfile /var/lib/ntp/ntp.drift
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+server 0.ubuntu.pool.ntp.org
+server 1.ubuntu.pool.ntp.org
+server 2.ubuntu.pool.ntp.org
+server 3.ubuntu.pool.ntp.org
+server ntp.ubuntu.com
+restrict -4 default kod notrap nomodify nopeer noquery
+restrict -6 default kod notrap nomodify nopeer noquery
+restrict 127.0.0.1
+restrict ::1
+```
+
+Now modify the ntp.yml like following:   
+
+```
+# vim ~/Code/Ansible/ntp-install.yml
+---
+- hosts: all
+  sudo: yes
+  gather_facts: yes
+
+  tasks:
+
+  - name: install ntp
+    yum: name=ntp state=installed update_cache=yes
+    when: ansible_os_family == "RedHat"
+
+  - name: write our ntp.conf
+    copy: src=files/ntp.conf dest=/etc/ntp.conf mode=644 owner=root group=root
+    notify: restart ntp
+
+  - name: start ntp
+    service: name=ntpd state=started enabled=true
+    when: ansible_os_family == "RedHat"
+
+  handlers:
+
+  - name: restart ntp
+    service: name=ntpd state=restarted
+```
+
+Re-run the playbook, the output is:   
+
+```
+# ansible-playbook ntp-install.yml
+
+PLAY [all] ******************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [10.15.33.5]
+
+TASK: [install ntp] *********************************************************** 
+ok: [10.15.33.5]
+
+TASK: [write our ntp.conf] **************************************************** 
+ok: [10.15.33.5]
+
+TASK: [start ntp] ************************************************************* 
+ok: [10.15.33.5]
+
+PLAY RECAP ******************************************************************** 
+10.15.33.5                 : ok=4    changed=0    unreachable=0    failed=0   
+```
+
+Now check the result on 10.15.33.5:    
+
+```
+# cat /etc/ntp.conf
+....
+```
+
+We could see the ntp's configuration file has been modified.   
+
+#### Uninstall NTP Service
+The playbook for unintalling ntp service is quite easy, the file is:    
+
+```
+# vim ~/Code/Ansible/ntp-remove.yml
+---
+- hosts: all
+  sudo: yes
+  gather_facts: yes
+
+  tasks:
+
+  - name: remove ntp
+    yum: name=ntp state=absent
+    when: ansible_os_family == "RedHat"
+```
+
+Running Result:   
+
+```
+# ansible-playbook ntp-remove.yml
+
+PLAY [all] ******************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [10.15.33.5]
+
+TASK: [remove ntp] ************************************************************ 
+changed: [10.15.33.5]
+
+PLAY RECAP ******************************************************************** 
+10.15.33.5                 : ok=2    changed=1    unreachable=0    failed=0   
+```
+
+Check result:   
+
+```
+# ps -ef | grep ntp
+# rpm -qa ntp
+```
+
+Notice: because your node couldnot reach internet, the remove ntp may fail, so first you should remove all of the official repo files:   
+
+``` 
+# mv /etc/yum.repos.d/CentOS* /root/
+```

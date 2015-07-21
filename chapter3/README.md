@@ -10,6 +10,4 @@ Homepage:
 ### Chapter Content List
 This Chapter including following content: 
 * Setup Ansible Node
-* Cobbler WebServer
-* ISO and Distros
-* Deploy Your First Node
+* Powerful Playbooks
