@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>ISOs | Use Cobbler And Ansible For Deploying CloudStack</title>
+        <title>Cobbler Server | Use Cobbler And Ansible For Deploying CloudStack</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 0.7.0">
@@ -19,10 +19,10 @@
     <meta name="author" content="purplepalmdash">
     
     
-    <link rel="next" href="../chapter1/section1.2.html" />
+    <link rel="next" href="../chapter2/section2.1.html" />
     
     
-    <link rel="prev" href="../chapter1/README.html" />
+    <link rel="prev" href="../chapter1/section1.4.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="purplepalmdash/WolfHunterGitBook" data-level="1.1" data-basepath=".." data-revision="1437489254053">
+    <div class="book" data-github="purplepalmdash/WolfHunterGitBook" data-level="2" data-basepath=".." data-revision="1437489254053">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -114,7 +114,7 @@
         
         
         <li>
-            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/edit/master/chapter1/section1.1.md" target="blank" class="contribute-link">Edit and Contribute</a>
+            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/edit/master/chapter2/README.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
 
@@ -158,7 +158,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.1" data-path="chapter1/section1.1.html">
+        <li class="chapter " data-level="1.1" data-path="chapter1/section1.1.html">
             
                 
                     <a href="../chapter1/section1.1.html">
@@ -227,7 +227,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2" data-path="chapter2/README.html">
+        <li class="chapter active" data-level="2" data-path="chapter2/README.html">
             
                 
                     <a href="../chapter2/README.html">
@@ -532,7 +532,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 9.090909090909092%;min-width: 4.545454545454546%;"></div>
+        <div class="inner" style="width: 27.272727272727273%;min-width: 22.727272727272727%;"></div>
     </div>
     <div class="chapters">
     
@@ -542,13 +542,13 @@
     
         <a href="../chapter1/section1.1.html" title="ISOs" class="chapter done " data-progress="1.1" style="left: 9.090909090909092%;"></a>
     
-        <a href="../chapter1/section1.2.html" title="Network Environment" class="chapter  " data-progress="1.2" style="left: 13.636363636363637%;"></a>
+        <a href="../chapter1/section1.2.html" title="Network Environment" class="chapter done " data-progress="1.2" style="left: 13.636363636363637%;"></a>
     
-        <a href="../chapter1/section1.3.html" title="WolfHunter Root Machine" class="chapter  " data-progress="1.3" style="left: 18.181818181818183%;"></a>
+        <a href="../chapter1/section1.3.html" title="WolfHunter Root Machine" class="chapter done " data-progress="1.3" style="left: 18.181818181818183%;"></a>
     
-        <a href="../chapter1/section1.4.html" title="Check Installation" class="chapter  " data-progress="1.4" style="left: 22.727272727272727%;"></a>
+        <a href="../chapter1/section1.4.html" title="Check Installation" class="chapter done " data-progress="1.4" style="left: 22.727272727272727%;"></a>
     
-        <a href="../chapter2/README.html" title="Cobbler Server" class="chapter  new-chapter" data-progress="2" style="left: 27.272727272727273%;"></a>
+        <a href="../chapter2/README.html" title="Cobbler Server" class="chapter done new-chapter" data-progress="2" style="left: 27.272727272727273%;"></a>
     
         <a href="../chapter2/section2.1.html" title="Setup Cobbler Server" class="chapter  " data-progress="2.1" style="left: 31.818181818181817%;"></a>
     
@@ -587,12 +587,21 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_7">
                     
-                        <h2 id="iso-download">ISO Download</h2>
-<p>You have to download following ISOs which will be used for deployment in the whole steps:<br><strong> CentOS6.6 DVD 1 </strong><br><a href="http://mirrors.aliyun.com/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-bin-DVD1.iso" target="_blank">http://mirrors.aliyun.com/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-bin-DVD1.iso</a>   </p>
-<p><strong> CentOS7.1 DVD Everything </strong><br><a href="http://mirrors.aliyun.com/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Everything-1503-01.iso" target="_blank">http://mirrors.aliyun.com/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Everything-1503-01.iso</a>    </p>
-<p><strong> CentOS6.5 DVD 1/2 </strong><br><a href="http://vault.centos.org/6.5/isos/x86_64/CentOS-6.5-x86_64-bin-DVD1.iso" target="_blank">http://vault.centos.org/6.5/isos/x86_64/CentOS-6.5-x86_64-bin-DVD1.iso</a><br><a href="http://vault.centos.org/6.5/isos/x86_64/CentOS-6.5-x86_64-bin-DVD2.iso" target="_blank">http://vault.centos.org/6.5/isos/x86_64/CentOS-6.5-x86_64-bin-DVD2.iso</a>    </p>
+                        <h2 id="cobbler-server">Cobbler Server</h2>
+<p>In this chapter we will cover how to setup a cobbler server in Inner network.    </p>
+<h3 id="cobbler-introduction">Cobbler Introduction:</h3>
+<p>Cobbler is a Linux installation server that allows for rapid setup of network installation environments. It glues together and automates many associated Linux tasks so you do not have to hop between lots of various commands and applications when rolling out new systems, and, in some cases, changing existing ones.</p>
+<p>Homepage:<br><a href="https://github.com/cobbler/cobbler" target="_blank">https://github.com/cobbler/cobbler</a>    </p>
+<h3 id="chapter-content-list">Chapter Content List</h3>
+<p>This Chapter including following content: </p>
+<ul>
+<li>Setup Cobbler Server</li>
+<li>Cobbler WebServer</li>
+<li>ISO and Distros</li>
+<li>Deploy Your First Node</li>
+</ul>
 
                     
                     </section>
@@ -602,10 +611,10 @@
         </div>
 
         
-        <a href="../chapter1/README.html" class="navigation navigation-prev " aria-label="Previous page: Environment"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter1/section1.4.html" class="navigation navigation-prev " aria-label="Previous page: Check Installation"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter1/section1.2.html" class="navigation navigation-next " aria-label="Next page: Network Environment"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter2/section2.1.html" class="navigation navigation-next " aria-label="Next page: Setup Cobbler Server"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

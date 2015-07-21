@@ -165,4 +165,32 @@ Install cloudstack management packages via:
 # yum install -y cloudstack-management
 ```
 
+#### 5. Install Cloud-Monkey    
+Cloud-Monkey is for quickly configurating CloudStack, install it via:    
 
+```
+# yum install -y python-pip
+# pip install cloudmonkey
+```
+
+#### 6. Configure CloudStack Database
+
+```
+cloudstack-setup-databases cloud:engine@localhost --deploy-as=root:engine -i 10.15.33.5>>/root/cs_dbinstall.out 2>&1
+```
+
+#### 7.  Configure Management server
+
+```
+# cloudstack-setup-management >> /root/cs_mgmtinstall.out 2>&1
+```
+
+By now you could visit the Management node via:     
+
+```
+# firefox http://10.15.33.5:8080/client/
+```
+
+![/images/2015_07_21_21_29_38_623x330.jpg](/images/2015_07_21_21_29_38_623x330.jpg)   
+
+Username/Password is admin/password.    
