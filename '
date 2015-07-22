@@ -1,0 +1,42 @@
+## Configure CloudStack
+
+### Change Login Password
+The first time you login to the installed CloudStack Management node, you will see following webpage:    
+![/images/2015_07_22_09_05_39_661x481.jpg](/images/2015_07_22_09_05_39_661x481.jpg)   
+
+Click `Continue with basic installation`, set the password:    
+![/images/2015_07_22_09_07_41_289x226.jpg](/images/2015_07_22_09_07_41_289x226.jpg)    
+
+At this point, refresh your browser, and you see the login window again, use your newly modified password for login:    
+![/images/2015_07_22_09_08_34_501x250.jpg](/images/2015_07_22_09_08_34_501x250.jpg)  
+
+After login you will see the same webpage which asks you follow with guide or not, we select `I have used CloudStack before, skip this guide`  button and continue with next setup.    
+
+Your webpage listed as following:    
+![/images/2015_07_22_09_12_18_629x390.jpg](/images/2015_07_22_09_12_18_629x390.jpg)   
+
+### Infrasturcture Configuration
+Click `Infrasturcture`, and you will see nothing has been configured yet.    
+![/images/2015_07_22_09_13_57_900x469.jpg](/images/2015_07_22_09_13_57_900x469.jpg)    
+
+Click `View All` button under `zone`:   
+![/images/2015_07_22_09_15_43_348x186.jpg](/images/2015_07_22_09_15_43_348x186.jpg)
+
+Click `Add zone` button:   
+![/images/2015_07_22_09_18_11_704x128.jpg](/images/2015_07_22_09_18_11_704x128.jpg)   
+
+Select Zone Type:   
+![/images/2015_07_22_09_19_51_677x560.jpg](/images/2015_07_22_09_19_51_677x560.jpg)    
+
+Configure Zone Info:   
+![/images/2015_07_22_09_21_31_641x443.jpg](/images/2015_07_22_09_21_31_641x443.jpg)    
+
+![/images/2015_07_22_09_23_12_482x403.jpg](/images/2015_07_22_09_23_12_482x403.jpg)   
+
+Click Next and click Next again to step `4 Add Resources`, configure the start/end IP Arrange:    
+![/images/2015_07_22_09_26_09_672x536.jpg](/images/2015_07_22_09_26_09_672x536.jpg)    
+
+Continue configure Guest Traffic:  
+![/images/2015_07_22_09_28_33_672x496.jpg](/images/2015_07_22_09_28_33_672x496.jpg)     
+
+

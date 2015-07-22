@@ -1,28 +1,34 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
+<html lang="en" >
     
     <head>
         
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Node Preparation | Use Cobbler And Ansible For Deploying CloudStack</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 0.7.0">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
+    <link rel="stylesheet" href="../gitbook/style.css">
     
     
-    <meta name="author" content="purplepalmdash">
+
+        
     
     
     <link rel="next" href="../chapter4/section4.2.html" />
     
     
-    <link rel="prev" href="../chapter4/README.html" />
+    <link rel="prev" href="../chapter4/index.html" />
     
 
         
@@ -30,126 +36,45 @@
     <body>
         
         
-<link rel="stylesheet" href="../gitbook/style.css">
-
-
-        
-    <div class="book" data-github="purplepalmdash/WolfHunterGitBook" data-level="4.1" data-basepath=".." data-revision="1437524838986">
-    <div class="book-header">
-    <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
-    
-    <a href="https://github.com/purplepalmdash/WolfHunterGitBook" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
-    
-    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
-    <span id="font-settings-wrapper">
-        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="btn-group btn-block">
-        <button id="reduce-font-size" class="btn btn-default">A</button>
-        <button id="enlarge-font-size" class="btn btn-default">A</button>
-    </div>
-
-    <ul class="list-group font-family-list">
-        <li class="list-group-item" data-font="0">Serif</li>
-        <li class="list-group-item" data-font="1">Sans</li>
-    </ul>
-
-    <div class="btn-group btn-group-xs btn-block color-theme-list">
-        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
-        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
-        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
-    </div>
-</div>
-
-    </span>
-
-    <!-- Actions Right -->
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-spinner fa-spin"></i>
-        <a href="../" >Use Cobbler And Ansible For Deploying CloudStack</a>
-    </h1>
-</div>
-
+    <div class="book" data-level="4.1" data-basepath=".." data-revision="Wed Jul 22 2015 18:30:54 GMT+0800 (CST)">
     
 
 <div class="book-summary">
     <div class="book-search">
-        <input type="text" placeholder="Search" class="form-control" />
+        <input type="text" placeholder="Type to search" class="form-control" />
     </div>
     <ul class="summary">
         
         
         
-        <li>
-            <a href="https://github.com/purplepalmdash" target="blank" class="author-link">About the author</a>
-        </li>
         
 
-        
-        
-        <li>
-            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/issues" target="blank" class="issues-link">Questions and Issues</a>
-        </li>
-        
-
-        
-        
-        <li>
-            <a href="https://github.com/purplepalmdash/WolfHunterGitBook/edit/master/chapter4/section4.1.md" target="blank" class="contribute-link">Edit and Contribute</a>
-        </li>
-        
-
-	
-
-        
-        <li class="divider"></li>
         
 
         
     
-        
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
-                         Introduction
+                        Introduction
                     </a>
                 
             
             
         </li>
     
-        
-        <li class="chapter " data-level="1" data-path="chapter1/README.html">
+        <li class="chapter " data-level="1" data-path="chapter1/index.html">
             
                 
-                    <a href="../chapter1/README.html">
+                    <a href="../chapter1/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
                         
-                         Environment
+                        Environment
                     </a>
                 
             
@@ -157,7 +82,6 @@
             <ul class="articles">
                 
     
-        
         <li class="chapter " data-level="1.1" data-path="chapter1/section1.1.html">
             
                 
@@ -166,14 +90,13 @@
                         
                             <b>1.1.</b>
                         
-                         ISOs
+                        ISOs
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="1.2" data-path="chapter1/section1.2.html">
             
                 
@@ -182,14 +105,13 @@
                         
                             <b>1.2.</b>
                         
-                         Network Environment
+                        Network Environment
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="1.3" data-path="chapter1/section1.3.html">
             
                 
@@ -198,14 +120,13 @@
                         
                             <b>1.3.</b>
                         
-                         WolfHunter Root Machine
+                        WolfHunter Root Machine
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="1.4" data-path="chapter1/section1.4.html">
             
                 
@@ -214,7 +135,7 @@
                         
                             <b>1.4.</b>
                         
-                         Check Installation
+                        Check Installation
                     </a>
                 
             
@@ -226,16 +147,15 @@
             
         </li>
     
-        
-        <li class="chapter " data-level="2" data-path="chapter2/README.html">
+        <li class="chapter " data-level="2" data-path="chapter2/index.html">
             
                 
-                    <a href="../chapter2/README.html">
+                    <a href="../chapter2/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
                         
-                         Cobbler Server
+                        Cobbler Server
                     </a>
                 
             
@@ -243,7 +163,6 @@
             <ul class="articles">
                 
     
-        
         <li class="chapter " data-level="2.1" data-path="chapter2/section2.1.html">
             
                 
@@ -252,14 +171,13 @@
                         
                             <b>2.1.</b>
                         
-                         Setup Cobbler Server
+                        Setup Cobbler Server
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="2.2" data-path="chapter2/section2.2.html">
             
                 
@@ -268,14 +186,13 @@
                         
                             <b>2.2.</b>
                         
-                         Cobbler Web
+                        Cobbler Web
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="2.3" data-path="chapter2/section2.3.html">
             
                 
@@ -284,14 +201,13 @@
                         
                             <b>2.3.</b>
                         
-                         Import ISOs
+                        Import ISOs
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="2.4" data-path="chapter2/section2.4.html">
             
                 
@@ -300,7 +216,7 @@
                         
                             <b>2.4.</b>
                         
-                         Deploy Your First Node
+                        Deploy Your First Node
                     </a>
                 
             
@@ -312,16 +228,15 @@
             
         </li>
     
-        
-        <li class="chapter " data-level="3" data-path="chapter3/README.html">
+        <li class="chapter " data-level="3" data-path="chapter3/index.html">
             
                 
-                    <a href="../chapter3/README.html">
+                    <a href="../chapter3/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.</b>
                         
-                         Ansible
+                        Ansible
                     </a>
                 
             
@@ -329,7 +244,6 @@
             <ul class="articles">
                 
     
-        
         <li class="chapter " data-level="3.1" data-path="chapter3/section3.1.html">
             
                 
@@ -338,14 +252,13 @@
                         
                             <b>3.1.</b>
                         
-                         Setup Ansible Node
+                        Setup Ansible Node
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="3.2" data-path="chapter3/section3.2.html">
             
                 
@@ -354,7 +267,7 @@
                         
                             <b>3.2.</b>
                         
-                         Powerful Playbooks
+                        Powerful Playbooks
                     </a>
                 
             
@@ -366,16 +279,15 @@
             
         </li>
     
-        
-        <li class="chapter " data-level="4" data-path="chapter4/README.html">
+        <li class="chapter " data-level="4" data-path="chapter4/index.html">
             
                 
-                    <a href="../chapter4/README.html">
+                    <a href="../chapter4/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>4.</b>
                         
-                         Deploy CloudStack(Manual)
+                        Deploy CloudStack(Manual)
                     </a>
                 
             
@@ -383,7 +295,6 @@
             <ul class="articles">
                 
     
-        
         <li class="chapter active" data-level="4.1" data-path="chapter4/section4.1.html">
             
                 
@@ -392,14 +303,13 @@
                         
                             <b>4.1.</b>
                         
-                         Node Preparation
+                        Node Preparation
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="4.2" data-path="chapter4/section4.2.html">
             
                 
@@ -408,14 +318,13 @@
                         
                             <b>4.2.</b>
                         
-                         Node Static IP
+                        Node Static IP
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="4.3" data-path="chapter4/section4.3.html">
             
                 
@@ -424,14 +333,13 @@
                         
                             <b>4.3.</b>
                         
-                         CloudStack Management
+                        CloudStack Management
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="4.4" data-path="chapter4/section4.4.html">
             
                 
@@ -440,14 +348,13 @@
                         
                             <b>4.4.</b>
                         
-                         CloudStack Agent
+                        CloudStack Agent
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="4.5" data-path="chapter4/section4.5.html">
             
                 
@@ -456,14 +363,13 @@
                         
                             <b>4.5.</b>
                         
-                         Setup Secondary Storage
+                        Setup Secondary Storage
                     </a>
                 
             
             
         </li>
     
-        
         <li class="chapter " data-level="4.6" data-path="chapter4/section4.6.html">
             
                 
@@ -472,7 +378,7 @@
                         
                             <b>4.6.</b>
                         
-                         Configure CloudStack
+                        Configure CloudStack
                     </a>
                 
             
@@ -484,66 +390,178 @@
             
         </li>
     
-        
-        <li class="chapter " data-level="5" data-path="chapter5/README.html">
+        <li class="chapter " data-level="5" data-path="chapter5/index.html">
             
                 
-                    <a href="../chapter5/README.html">
+                    <a href="../chapter5/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.</b>
                         
-                         Deploy CloudStack(The Ansible Way)
+                        Ease Your Deployment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter5/section5.1.html">
+            
+                
+                    <a href="../chapter5/section5.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Download Packages
                     </a>
                 
             
             
         </li>
     
-        
-        <li class="chapter " data-level="6" data-path="chapter6/README.html">
+        <li class="chapter " data-level="5.2" data-path="chapter5/section5.2.html">
             
                 
-                    <a href="../chapter6/README.html">
+                    <a href="../chapter5/section5.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Create Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chapter5/section5.3.html">
+            
+                
+                    <a href="../chapter5/section5.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Using Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chapter5/section5.4.html">
+            
+                
+                    <a href="../chapter5/section5.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        PIP Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6/index.html">
+            
+                
+                    <a href="../chapter6/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>6.</b>
                         
-                         Easier Your Deployment
+                        Deploy CloudStack(The Ansible Way)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter6/section6.1.html">
+            
+                
+                    <a href="../chapter6/section6.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ansible Resources
                     </a>
                 
             
             
         </li>
     
-        
-        <li class="chapter " data-level="7" data-path="chapter7/README.html">
+        <li class="chapter " data-level="6.2" data-path="chapter6/section6.2.html">
             
                 
-                    <a href="../chapter7/README.html">
+                    <a href="../chapter6/section6.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Deploy CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="chapter6/section6.3.html">
+            
+                
+                    <a href="../chapter6/section6.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Ansible Playbooks For CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter6/section6.4.html">
+            
+            <span><b>6.4.</b> Deploy CS Agent</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7/index.html">
+            
+                
+                    <a href="../chapter7/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>7.</b>
                         
-                         Combine Cobbler and Ansible
+                        Combine Cobbler and Ansible
                     </a>
                 
             
             
         </li>
     
-        
-        <li class="chapter " data-level="8" data-path="chapter8/README.html">
+        <li class="chapter " data-level="8" data-path="chapter8/index.html">
             
-                
-                    <a href="../chapter8/README.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.</b>
-                        
-                         WolfHunter Deployment
-                    </a>
-                
+            <span><b>8.</b> WolfHunter Deployment</span>
             
             
         </li>
@@ -553,7 +571,9 @@
         
         <li class="divider"></li>
         <li>
-            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
         </li>
         
     </ul>
@@ -561,69 +581,95 @@
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="page-wrapper" tabindex="-1">
-                <div class="book-progress">
-    <div class="bar">
-        <div class="inner" style="width: 62.5%;min-width: 58.333333333333336%;"></div>
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
     </div>
-    <div class="chapters">
-    
-        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
-    
-        <a href="../chapter1/README.html" title="Environment" class="chapter done new-chapter" data-progress="1" style="left: 4.166666666666667%;"></a>
-    
-        <a href="../chapter1/section1.1.html" title="ISOs" class="chapter done " data-progress="1.1" style="left: 8.333333333333334%;"></a>
-    
-        <a href="../chapter1/section1.2.html" title="Network Environment" class="chapter done " data-progress="1.2" style="left: 12.5%;"></a>
-    
-        <a href="../chapter1/section1.3.html" title="WolfHunter Root Machine" class="chapter done " data-progress="1.3" style="left: 16.666666666666668%;"></a>
-    
-        <a href="../chapter1/section1.4.html" title="Check Installation" class="chapter done " data-progress="1.4" style="left: 20.833333333333332%;"></a>
-    
-        <a href="../chapter2/README.html" title="Cobbler Server" class="chapter done new-chapter" data-progress="2" style="left: 25%;"></a>
-    
-        <a href="../chapter2/section2.1.html" title="Setup Cobbler Server" class="chapter done " data-progress="2.1" style="left: 29.166666666666668%;"></a>
-    
-        <a href="../chapter2/section2.2.html" title="Cobbler Web" class="chapter done " data-progress="2.2" style="left: 33.333333333333336%;"></a>
-    
-        <a href="../chapter2/section2.3.html" title="Import ISOs" class="chapter done " data-progress="2.3" style="left: 37.5%;"></a>
-    
-        <a href="../chapter2/section2.4.html" title="Deploy Your First Node" class="chapter done " data-progress="2.4" style="left: 41.666666666666664%;"></a>
-    
-        <a href="../chapter3/README.html" title="Ansible" class="chapter done new-chapter" data-progress="3" style="left: 45.833333333333336%;"></a>
-    
-        <a href="../chapter3/section3.1.html" title="Setup Ansible Node" class="chapter done " data-progress="3.1" style="left: 50%;"></a>
-    
-        <a href="../chapter3/section3.2.html" title="Powerful Playbooks" class="chapter done " data-progress="3.2" style="left: 54.166666666666664%;"></a>
-    
-        <a href="../chapter4/README.html" title="Deploy CloudStack(Manual)" class="chapter done new-chapter" data-progress="4" style="left: 58.333333333333336%;"></a>
-    
-        <a href="../chapter4/section4.1.html" title="Node Preparation" class="chapter done " data-progress="4.1" style="left: 62.5%;"></a>
-    
-        <a href="../chapter4/section4.2.html" title="Node Static IP" class="chapter  " data-progress="4.2" style="left: 66.66666666666667%;"></a>
-    
-        <a href="../chapter4/section4.3.html" title="CloudStack Management" class="chapter  " data-progress="4.3" style="left: 70.83333333333333%;"></a>
-    
-        <a href="../chapter4/section4.4.html" title="CloudStack Agent" class="chapter  " data-progress="4.4" style="left: 75%;"></a>
-    
-        <a href="../chapter4/section4.5.html" title="Setup Secondary Storage" class="chapter  " data-progress="4.5" style="left: 79.16666666666667%;"></a>
-    
-        <a href="../chapter4/section4.6.html" title="Configure CloudStack" class="chapter  " data-progress="4.6" style="left: 83.33333333333333%;"></a>
-    
-        <a href="../chapter5/README.html" title="Deploy CloudStack(The Ansible Way)" class="chapter  new-chapter" data-progress="5" style="left: 87.5%;"></a>
-    
-        <a href="../chapter6/README.html" title="Easier Your Deployment" class="chapter  new-chapter" data-progress="6" style="left: 91.66666666666667%;"></a>
-    
-        <a href="../chapter7/README.html" title="Combine Cobbler and Ansible" class="chapter  new-chapter" data-progress="7" style="left: 95.83333333333333%;"></a>
-    
-        <a href="../chapter8/README.html" title="WolfHunter Deployment" class="chapter  new-chapter" data-progress="8" style="left: 100%;"></a>
-    
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
     </div>
 </div>
 
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Use Cobbler And Ansible For Deploying CloudStack</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_472">
+                
+                    <section class="normal" id="section-">
                     
                         <h2 id="node-preparation">Node Preparation</h2>
 <p>In this section we will prepare 2 nodes for CloudStack Deploymet, one for deploying CloudStack Management Node, the second is for CloudStack Agent Node.    </p>
@@ -631,7 +677,7 @@
 <h4 id="parameter">Parameter</h4>
 <p>OS: CentOS 6.5<br>Mem: 3072MB(3G)<br>CPU: 2-Core<br>Disk: 100G<br>Network: Inner+External    </p>
 <h4 id="add-external-network">Add External Network</h4>
-<p>We use the WolfHunterFirstNode machine, first we power down this machine, add the second ethernet card.<br><img src="/images/2015_07_21_14_09_27_631x238.jpg" alt="/images/2015_07_21_14_09_27_631x238.jpg"><br>Power on this machine again. The newly added ethernet could not get the ip address, because we didn&#39;t set it in sysconfig, edit its configuration.     </p>
+<p>We use the WolfHunterFirstNode machine, first we power down this machine, add the second ethernet card.<br><img src="../images/2015_07_21_14_09_27_631x238.jpg" alt="/images/2015_07_21_14_09_27_631x238.jpg"><br>Power on this machine again. The newly added ethernet could not get the ip address, because we didn&apos;t set it in sysconfig, edit its configuration.     </p>
 <pre><code># cd /etc/sysconfig/network-scripts/
 # cp ifcfg-eth0 ifcfg-eth1
 # vim ifcfg-eth1
@@ -699,8 +745,8 @@ gpgcheck=0
 <p>OS: CentOS 7.1<br>Mem: 3072MB(3G)<br>CPU: 2-Core(With KVM acceleration enabled)<br>Disk: 100G<br>Network: Inner+External    </p>
 <h4 id="create-machine">Create Machine</h4>
 <p>CloudStack Agent Node runs on CentOS7.1, thus we created a new kvm machine, as we described in chapter 2( 2.4 Deploy Your First Node). </p>
-<p>This node need the CPU support kvm acceleration, so when creating the kvm machine, we setup the CPU parameter like following.<br><img src="/images/2015_07_21_14_36_36_604x443.jpg" alt="/images/2015_07_21_14_36_36_604x443.jpg">   </p>
-<p>In PXE menu, select CentOS7.1 related item:<br><img src="/images/2015_07_21_14_40_20_545x291.jpg" alt="/images/2015_07_21_14_40_20_545x291.jpg">    </p>
+<p>This node need the CPU support kvm acceleration, so when creating the kvm machine, we setup the CPU parameter like following.<br><img src="../images/2015_07_21_14_36_36_604x443.jpg" alt="/images/2015_07_21_14_36_36_604x443.jpg">   </p>
+<p>In PXE menu, select CentOS7.1 related item:<br><img src="../images/2015_07_21_14_40_20_545x291.jpg" alt="/images/2015_07_21_14_40_20_545x291.jpg">    </p>
 <p>Press enter and waiting for installation finished.  </p>
 <h4 id="network-configuration">Network Configuration</h4>
 <p>The network info could be viewed via:    </p>
@@ -723,9 +769,9 @@ gpgcheck=0
        valid_lft 21527sec preferred_lft 21527sec
     inet6 fe80::5054:ff:fe07:e66f/64 scope link 
        valid_lft forever preferred_lft forever
-</code></pre><p>There won&#39;t be some special configuration, cause we added the hardware at the very beginning, the system has setup the address automatically.   </p>
+</code></pre><p>There won&apos;t be some special configuration, cause we added the hardware at the very beginning, the system has setup the address automatically.   </p>
 <h4 id="repository-configuration">Repository Configuration</h4>
-<p>Since CentOS7.1 is the newest version, we needn&#39;t setup the repository. But we also have to setup the epel repository and cloudstack repository.    </p>
+<p>Since CentOS7.1 is the newest version, we needn&apos;t setup the repository. But we also have to setup the epel repository and cloudstack repository.    </p>
 <p>Epel Repository:   </p>
 <pre><code># yum install -y wget vim
 # wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
@@ -745,12 +791,13 @@ gpgcheck=0
                     
                     </section>
                 
+                
                 </div>
             </div>
         </div>
 
         
-        <a href="../chapter4/README.html" class="navigation navigation-prev " aria-label="Previous page: Deploy CloudStack(Manual)"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter4/index.html" class="navigation navigation-prev " aria-label="Previous page: Deploy CloudStack(Manual)"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../chapter4/section4.2.html" class="navigation navigation-next " aria-label="Next page: Node Static IP"><i class="fa fa-angle-right"></i></a>
@@ -759,16 +806,7 @@ gpgcheck=0
 </div>
 
         
-<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
 <script src="../gitbook/app.js"></script>
-
-    
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
 
     
     <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
@@ -776,7 +814,7 @@ gpgcheck=0
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

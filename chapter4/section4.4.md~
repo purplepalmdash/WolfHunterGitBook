@@ -42,5 +42,39 @@ Restart libvirtd service:
 # service libvirtd restart
 ```
 
+### Configuration of Network
+The Cloudstack agent installation on CentOS7 won't automatically setup the bridge for your network, thus we have to setup it manually. If we didn't manually setup the cloudbr0, then in `adding host` section the procedure will fail:    
+
+```
+# vim /etc/sysconfig/network-scripts/ifcfg-eth1 
+DEVICE=eth1
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=yes
+BOOTPROTO=none
+BRIDGE=cloudbr0
+IPV6INIT=no
+# vim /etc/sysconfig/network-scripts/ifcfg-cloudbr0 
+DEVICE=cloudbr0
+TYPE=Bridge
+BOOTPROTO=static
+IPADDR=10.15.33.6
+IPV6INIT=no
+ONBOOT=yes
+DEPLAY=0
+```
+
+Also we could disable eth0, because we won't use Internet connection any more.   
+
+```
+# vim /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+TYPE=Ethernet
+ONBOOT=no
+NM_CONTROLLED=yes
+BOOTPROTO=none
+IPV6INIT=no
+```
+
 ### End Of This Section
 By now we have setup the CloudStack Agent node which runs on CentOS7.1. In following section we will import template and let our Agent be controlled by CloudStack Management Node.     

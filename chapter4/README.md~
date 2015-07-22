@@ -6,6 +6,8 @@ We choose CentOS6.5 to run CloudStack Management Node, while CentOS7.1 for Cloud
 ### Chapter Content List
 The content in this chapter is listed as following:    
 * Node Preparation
+* Node Static IP
 * CloudStack Managment Node
 * CloudStack Agent Node
-
+* Setup Secondary Storage
+* Configure CloudStack
