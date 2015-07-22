@@ -195,5 +195,8 @@ By now you could visit the Management node via:
 
 Username/Password is admin/password.   
 
+You could check the version of the installed management node version:    
+![/images/2015_07_22_07_43_49_298x175.jpg](/images/2015_07_22_07_43_49_298x175.jpg)    
+
 ### End Of This Section
 By walking through this section we have installed CloudStack Management Node in CentOS6.5 based node. Next section we will install CloudStack Agent Node on CentOS7.1.       

@@ -1,0 +1,41 @@
+## Setup Secondary Storage
+Secondary Storage is used for storing templates,etc. In this section we will setup a nfs serve at our Cobbler Server(Since Cobbler Server) will always stay alive during the deployment period), and use it as the secondary storage for CloudStack usage.     
+
+### NFS Server
+Setup a NFS Server on `10.15.33.2`, which is your Cobbler Server, via following steps:    
+
+```
+# vim /etc/exports 
+/home/exports *(rw,async,no_root_squash,no_subtree_check)
+# mkdir -p /home/exports
+# chmod 777 -R /home/exports/
+# chkconfig nfs on
+# chkconfig rpcbind on
+# service nfs restart
+# service rpcbind restart
+# iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited
+# vim /etc/sysconfig/iptables
+-D INPUT -j REJECT --reject-with icmp-host-prohibited
+```
+
+Test it on Mgmt node or Agent node via:    
+
+```
+# mount -t nfs 10.15.33.2:/home/exports/ /mnt
+# touch /mnt/abc
+# ls /mnt
+abc
+```
+
+### Templates
+Use following command for importing the template:   
+
+```
+# mount -t nfs 10.15.33.2:/home/exports/ /mnt
+# /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt -m /mnt -u http://cloudstack.apt-get.eu/systemvm/4.5/systemvm64template-4.5-kvm.qcow2.bz2 -h kvm -F
+# ls /mnt
+template
+```
+
+### End Of This Section
+Using the imported systemvm template, we could startup the systemvm, and let CloudStack really become usable.    
