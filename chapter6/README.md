@@ -3,6 +3,8 @@ In previous chapters we have installed CloudStack manually, and everything went 
 
 ### Content List
 This chapter covers following content:    
-* Ansible Materials
-* Management Playbook
-* Agent Playbook
+* Ansible Resources
+* Deploy CS Management
+* Playbooks For CS Management
+* Deploy CS Agent
+* Playbooks For CS Agent
