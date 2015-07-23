@@ -1,0 +1,23 @@
+## CS Agent Node Deployment
+
+### Installation  
+Create the vm, customize its networking, and mark down its mac address:   
+
+![../images/2015_07_23_12_33_30_628x236.jpg](../images/2015_07_23_12_33_30_628x236.jpg)    
+
+Open a browser and point fill in the infos:    
+
+![../images/2015_07_23_14_20_47_340x365.jpg](../images/2015_07_23_14_20_47_340x365.jpg)    
+
+Press `Add` button, the webpage will enter `waiting` status.    
+
+![../images/2015_07_23_14_21_36_634x475.jpg](../images/2015_07_23_14_21_36_634x475.jpg)    
+
+And press the `start installation` button on virt-manager, begin to install:    
+
+After deployment, you will see the webpage turns into:    
+
+![../images/2015_07_23_11_59_55_330x339.jpg](../images/2015_07_23_11_59_55_330x339.jpg)    
+
+### Playbooks
+This part is the same as the CloudStack Management Node deployment, but notice please select "45CSAgent.yml"  playbook.    

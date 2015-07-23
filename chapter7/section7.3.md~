@@ -2,7 +2,6 @@
 Being a tool, its `ease of use` is very important for its spread. So in this section we will introduce a simple yet powerful web-framework for making the web interface for integration of Cobbler and Ansible.   
 
 ### Prepare
-Install following python packages.   
 
 ```
 # yum install -y gcc python-pip python-devel

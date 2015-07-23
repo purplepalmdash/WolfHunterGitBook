@@ -23,6 +23,3 @@ StrictHostKeyChecking no
 UserKnownHostsFile /dev/null
 EOF
 ```
-
-### End Of The Section
-More intelligent functionalities could be added, for example, power management, etc.   
