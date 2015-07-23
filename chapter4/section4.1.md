@@ -124,13 +124,15 @@ The network info could be viewed via:
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast \ 
+   state UP qlen 1000
     link/ether 52:54:00:f5:fd:cf brd ff:ff:ff:ff:ff:ff
     inet 10.15.34.226/24 brd 10.15.34.255 scope global dynamic eth0
        valid_lft 3526sec preferred_lft 3526sec
     inet6 fe80::5054:ff:fef5:fdcf/64 scope link 
        valid_lft forever preferred_lft forever
-3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast  \
+    state UP qlen 1000
     link/ether 52:54:00:07:e6:6f brd ff:ff:ff:ff:ff:ff
     inet 10.15.33.7/24 brd 10.15.33.255 scope global dynamic eth1
        valid_lft 21527sec preferred_lft 21527sec

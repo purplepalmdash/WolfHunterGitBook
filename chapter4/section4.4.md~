@@ -30,10 +30,20 @@ Simply install one package then you have done this part:
 Change following configurations:    
 
 ```
-# sed -i 's/#vnc_listen = "0.0.0.0"/vnc_listen = "0.0.0.0"/g' /etc/libvirt/qemu.conf && sed -i 's/cgroup_controllers=["cpu"]/#cgroup_controllers=["cpu"]/g' /etc/libvirt/qemu.conf
-# sed -i 's/#listen_tls = 0/listen_tls = 0/g' /etc/libvirt/libvirtd.conf && sed -i 's/#listen_tcp = 1/listen_tcp = 1/g' /etc/libvirt/libvirtd.conf && sed -i 's/#tcp_port = "16509"/tcp_port = "16509"/g' /etc/libvirt/libvirtd.conf && sed -i 's/#auth_tcp = "sasl"/auth_tcp = "none"/g' /etc/libvirt/libvirtd.conf && sed -i 's/#mdns_adv = 1/mdns_adv = 0/g' /etc/libvirt/libvirtd.conf
-# sed -i 's/#LIBVIRTD_ARGS="--listen"/LIBVIRTD_ARGS="--listen"/g' /etc/sysconfig/libvirtd 
-# sed -i '/cgroup_controllers/d' /usr/lib64/python2.7/site-packages/cloudutils/serviceConfig.py
+# sed -i 's/#vnc_listen = "0.0.0.0"/vnc_listen = "0.0.0.0"/g' \ 
+ /etc/libvirt/qemu.conf && sed -i 's/cgroup_ \ 
+ controllers=["cpu"]/#cgroup_controllers=["cpu"]/g' /etc/libvirt/qemu.conf
+# sed -i 's/#listen_tls = 0/listen_tls = 0/g' \ 
+  /etc/libvirt/libvirtd.conf && sed -i 's/#listen_tcp = 1/listen_tcp = 1/g' \
+  /etc/libvirt/libvirtd.conf && sed -i \ 
+ 's/#tcp_port = "16509"/tcp_port = "16509"/g' \
+ /etc/libvirt/libvirtd.conf && sed -i 's/#auth_tcp = "sasl"/auth_\
+ tcp = "none"/g' /etc/libvirt/libvirtd.conf && \
+ sed -i 's/#mdns_adv = 1/mdns_adv = 0/g' /etc/libvirt/libvirtd.conf
+# sed -i 's/#LIBVIRTD_ARGS="--listen"/LIBVIRTD_ARGS="--listen"/g' \
+ /etc/sysconfig/libvirtd 
+# sed -i '/cgroup_controllers/d' \
+  /usr/lib64/python2.7/site-packages/cloudutils/serviceConfig.py
 ```
 
 Restart libvirtd service:     

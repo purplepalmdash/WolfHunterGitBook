@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.5" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="4.5" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -893,7 +893,10 @@ abc
 </code></pre><h3 id="templates">Templates</h3>
 <p>Use following command for importing the template:   </p>
 <pre><code># mount -t nfs 10.15.33.2:/home/exports/ /mnt
-# /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt -m /mnt -u http://cloudstack.apt-get.eu/systemvm/4.5/systemvm64template-4.5-kvm.qcow2.bz2 -h kvm -F
+# /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt \
+  -m /mnt -u \ 
+  http://cloudstack.apt-get.eu/systemvm/4.5/systemvm64template-4.5-kvm.qcow2.bz2 \ 
+  -h kvm -F
 # ls /mnt
 template
 </code></pre><h3 id="end-of-this-section">End Of This Section</h3>

@@ -53,7 +53,7 @@ TASK: [install ssh key] *******************************************************
 changed: [10.15.33.5]
 
 PLAY RECAP ******************************************************************** 
-10.15.33.5                         : ok=1    changed=1    unreachable=0    failed=0   
+10.15.33.5                      : ok=1    changed=1    unreachable=0    failed=0   
 ```
 Now if you login into 10.15.33.5, you won't be asked to input password again.    
 
@@ -112,7 +112,8 @@ Check the result on 10.15.33.5:
 
 ```
 # ps -ef | grep ntp
-root     20887     1  0 02:25 ?        00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+root     20887     1  0 02:25 ?       
+  00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
 ```
 
 #### Configure NTP Service

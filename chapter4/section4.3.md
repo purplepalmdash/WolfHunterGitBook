@@ -176,7 +176,8 @@ Cloud-Monkey is for quickly configurating CloudStack, install it via:
 #### 6. Configure CloudStack Database
 
 ```
-cloudstack-setup-databases cloud:engine@localhost --deploy-as=root:engine -i 10.15.33.5>>/root/cs_dbinstall.out 2>&1
+# cloudstack-setup-databases cloud:engine@localhost \ 
+--deploy-as=root:engine -i 10.15.33.5>>/root/cs_dbinstall.out 2>&1
 ```
 
 #### 7.  Configure Management server

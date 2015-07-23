@@ -12,7 +12,8 @@ From the above chapter, we downloaded all of the packages which used for deployi
 
 ```
 # mkdir -p /root/Code/repo
-# yum install --downloadonly --downloaddir=/root/Code/repo ntp libselinux-python mysql-server MySQL-python cloudstack-management python-pip 
+# yum install --downloadonly --downloaddir=/root/Code/repo ntp \ 
+  libselinux-python mysql-server MySQL-python cloudstack-management python-pip 
 ```
 
 After a long wait, these packages will be downloaded to local.   

@@ -32,7 +32,10 @@ Use following command for importing the template:
 
 ```
 # mount -t nfs 10.15.33.2:/home/exports/ /mnt
-# /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt -m /mnt -u http://cloudstack.apt-get.eu/systemvm/4.5/systemvm64template-4.5-kvm.qcow2.bz2 -h kvm -F
+# /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt \
+  -m /mnt -u \ 
+  http://cloudstack.apt-get.eu/systemvm/4.5/systemvm64template-4.5-kvm.qcow2.bz2 \ 
+  -h kvm -F
 # ls /mnt
 template
 ```

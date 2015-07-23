@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -881,7 +881,8 @@
 # reboot
 </code></pre><p>Download repo file , update the cache, and install cobbler, cobbler requires django so we also have to enable epel repository:   </p>
 <pre><code># wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
-# wget http://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/CentOS_CentOS-6/home:libertas-ict:cobbler26.repo
+# wget http://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/ \
+  CentOS_CentOS-6/home:libertas-ict:cobbler26.repo
 # cp home\:libertas-ict\:cobbler26.repo /etc/yum.repos.d/cobbler.repo
 # yum install -y cobbler cobbler-web
 </code></pre><p>Check the installation result via:    </p>
@@ -1009,10 +1010,12 @@ Restart cobblerd and then run &apos;cobbler sync&apos; to apply changes.
 <h3 id="check-the-cobbler-server-status">Check the Cobbler Server Status</h3>
 <p>Check the dhcpd:</p>
 <pre><code># ps -ef |grep dhcp
-dhcpd     1911     1  0 17:51 ?        00:00:00 /usr/sbin/dhcpd -user dhcpd -group dhcpd
+dhcpd     1911     1  0 17:51 ?        00:00:00 /usr/sbin/dhcpd 
+     -user dhcpd -group dhcpd
 </code></pre><p>Check the tftp server status: </p>
 <pre><code># netstat -anp |grep 69
-udp        0      0 0.0.0.0:69                  0.0.0.0:*                               1488/xinetd
+udp        0      0 0.0.0.0:69                  0.0.0.0:*      
+  1488/xinetd
 </code></pre><h3 id="end-of-this-section">End Of This Section</h3>
 <p>During this section we have installed and configure the Cobbler Server, now all of the service are enabled in Cobbler Server. </p>
 <p>Now our Cobbler server is ready for serving PXE deployment, in next section we will introduce the ISO for really deployment. </p>

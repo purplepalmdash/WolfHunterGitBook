@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.3" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="4.3" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -991,7 +991,8 @@ COMMIT
 <pre><code># yum install -y python-pip
 # pip install cloudmonkey
 </code></pre><h4 id="6-configure-cloudstack-database">6. Configure CloudStack Database</h4>
-<pre><code>cloudstack-setup-databases cloud:engine@localhost --deploy-as=root:engine -i 10.15.33.5&gt;&gt;/root/cs_dbinstall.out 2&gt;&amp;1
+<pre><code># cloudstack-setup-databases cloud:engine@localhost \ 
+--deploy-as=root:engine -i 10.15.33.5&gt;&gt;/root/cs_dbinstall.out 2&gt;&amp;1
 </code></pre><h4 id="7-configure-management-server">7.  Configure Management server</h4>
 <pre><code># cloudstack-setup-management &gt;&gt; /root/cs_mgmtinstall.out 2&gt;&amp;1
 </code></pre><p>By now you could visit the Management node via:     </p>

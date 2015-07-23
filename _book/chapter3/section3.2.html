@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="3.2" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -907,7 +907,7 @@ TASK: [install ssh key] *******************************************************
 changed: [10.15.33.5]
 
 PLAY RECAP ******************************************************************** 
-10.15.33.5                         : ok=1    changed=1    unreachable=0    failed=0
+10.15.33.5                      : ok=1    changed=1    unreachable=0    failed=0
 </code></pre><p>Now if you login into 10.15.33.5, you won&apos;t be asked to input password again.    </p>
 <pre><code># ssh root@10.15.33.5
 Last login: Mon Jul 20 14:18:30 2015 from 10.15.33.2
@@ -948,7 +948,8 @@ PLAY RECAP ********************************************************************
 10.15.33.5                 : ok=3    changed=1    unreachable=0    failed=0
 </code></pre><p>Check the result on 10.15.33.5:    </p>
 <pre><code># ps -ef | grep ntp
-root     20887     1  0 02:25 ?        00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+root     20887     1  0 02:25 ?       
+  00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
 </code></pre><h4 id="configure-ntp-service">Configure NTP Service</h4>
 <p>Use playbooks we could configure the installed service, since sometimes we need to configure the ntpd qeury server, we could do this via ansible-playbook.   </p>
 <p>Add the ntp configuration file:    </p>

@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="5.1" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="5.1" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -877,7 +877,8 @@
 </code></pre><h3 id="create-cloudstack-management-repo">Create CloudStack Management Repo</h3>
 <p>From the above chapter, we downloaded all of the packages which used for deploying CS Managment Node for:    </p>
 <pre><code># mkdir -p /root/Code/repo
-# yum install --downloadonly --downloaddir=/root/Code/repo ntp libselinux-python mysql-server MySQL-python cloudstack-management python-pip
+# yum install --downloadonly --downloaddir=/root/Code/repo ntp \ 
+  libselinux-python mysql-server MySQL-python cloudstack-management python-pip
 </code></pre><p>After a long wait, these packages will be downloaded to local.   </p>
 <h3 id="create-cloudstack-agent-repo">Create CloudStack Agent Repo</h3>
 <p>The steps are similar but quite easier, do following:    </p>

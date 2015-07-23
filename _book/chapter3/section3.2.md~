@@ -53,7 +53,7 @@ TASK: [install ssh key] *******************************************************
 changed: [10.15.33.5]
 
 PLAY RECAP ******************************************************************** 
-10.15.33.5                         : ok=1    changed=1    unreachable=0    failed=0   
+10.15.33.5                      : ok=1    changed=1    unreachable=0    failed=0   
 ```
 Now if you login into 10.15.33.5, you won't be asked to input password again.    
 
@@ -112,7 +112,8 @@ Check the result on 10.15.33.5:
 
 ```
 # ps -ef | grep ntp
-root     20887     1  0 02:25 ?        00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+root     20887     1  0 02:25 ?       
+  00:00:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
 ```
 
 #### Configure NTP Service
@@ -246,3 +247,8 @@ Notice: because your node couldnot reach internet, the remove ntp may fail, so f
 ``` 
 # mv /etc/yum.repos.d/CentOS* /root/
 ```
+
+### End Of This Section
+By walking through this section, we have learned how ansible interactive with the remote node, how to use ansible to install/configure/remove service in destination node. Ansible could easily "translate" your ssh commands into playbooks, and combine them into files names "playbooks", by using playbooks we could easily deploy services.    
+
+In following chapters we will combine Cobbler and Ansible.   

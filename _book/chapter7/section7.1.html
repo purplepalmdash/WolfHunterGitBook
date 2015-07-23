@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -897,8 +897,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <pre><code>&gt;&gt;&gt; for i in CobblerServer.get_distros():
 ...   print i
 ... 
-{&apos;comment&apos;: &apos;&apos;, &apos;kernel&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/vmlinuz&apos;, &apos;uid&apos;: &apos;MTQzNzM5MTExOC43NDE4NTUyMzEuNjI3NjM&apos;, &apos;kernel_options_post&apos;: {}, &apos;redhat_management_key&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;kernel_options&apos;: {}, &apos;redhat_management_server&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;initrd&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/initrd.img&apos;, &apos;mtime&apos;: 1437391118.8802841, &apos;template_files&apos;: {}, &apos;ks_meta&apos;: {&apos;tree&apos;: &apos;http://@@http_server@@/cblr/links/CentOS-7.1-x86_64&apos;}, &apos;boot_files&apos;: {}, &apos;breed&apos;: &apos;redhat&apos;, &apos;os_version&apos;: &apos;rhel7&apos;, &apos;mgmt_classes&apos;: [], &apos;fetchable_files&apos;: {}, &apos;tree_build_time&apos;: 0, &apos;arch&apos;: &apos;x86_64&apos;, &apos;name&apos;: &apos;CentOS-7.1-x86_64&apos;, &apos;owners&apos;: [&apos;admin&apos;], &apos;ctime&apos;: 1437391118.744396, &apos;source_repos&apos;: [[&apos;http://@@http_server@@/cobbler/ks_mirror/config/CentOS-7.1-x86_64-0.repo&apos;, &apos;http://@@http_server@@/cobbler/ks_mirror/CentOS-7.1-x86_64&apos;]], &apos;depth&apos;: 0}
-{&apos;comment&apos;: &apos;&apos;, &apos;kernel&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/vmlinuz&apos;, &apos;uid&apos;: &apos;MTQzNzM5MTU2OS4wNjExNDMxMzYuMzE0NA&apos;, &apos;kernel_options_post&apos;: {}, &apos;redhat_management_key&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;kernel_options&apos;: {}, &apos;redhat_management_server&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;initrd&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/initrd.img&apos;, &apos;mtime&apos;: 1437391569.1240139, &apos;template_files&apos;: {}, &apos;ks_meta&apos;: {&apos;tree&apos;: &apos;http://@@http_server@@/cblr/links/CentOS-6.5-x86_64&apos;}, &apos;boot_files&apos;: {}, &apos;breed&apos;: &apos;redhat&apos;, &apos;os_version&apos;: &apos;rhel6&apos;, &apos;mgmt_classes&apos;: [], &apos;fetchable_files&apos;: {}, &apos;tree_build_time&apos;: 0, &apos;arch&apos;: &apos;x86_64&apos;, &apos;name&apos;: &apos;CentOS-6.5-x86_64&apos;, &apos;owners&apos;: [&apos;admin&apos;], &apos;ctime&apos;: 1437391569.0609839, &apos;source_repos&apos;: [[&apos;http://@@http_server@@/cobbler/ks_mirror/config/CentOS-6.5-x86_64-0.repo&apos;, &apos;http://@@http_server@@/cobbler/ks_mirror/CentOS-6.5-x86_64&apos;]], &apos;depth&apos;: 0}
+....................
 </code></pre><p>You could change the function of <code>get_distros()</code> to <code>get_profiles()</code>, then you will get all of the pre-defined profiles.    </p>
 <h3 id="get-more-detailed-info">Get More detailed info</h3>
 <p>It&apos;s pretty easy to fetch the specified value out of the dictionary, for example we want to fetch all of the kernel info of distros, we only use follow command:    </p>
@@ -935,15 +934,22 @@ node113
 </code></pre><p>Your could get more information of one single node, following is an example which shows the name, macaddress, ip address, etc information which could be fetched back from Cobbler API:   </p>
 <pre><code>&gt;&gt;&gt; for i in server.get_systems():
 ...     if i[&apos;name&apos;] == &apos;node166&apos;:
-...         print i[&apos;name&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;mac_address&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;ip_address&apos;] , i[&apos;gateway&apos;] , i[&apos;hostname&apos;] , i[&apos;profile&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;dns_name&apos;] , str(i[&apos;ctime&apos;]) , str(i[&apos;mtime&apos;])
+...         print i[&apos;name&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;mac_address&apos;] , \
+            i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;ip_address&apos;] , i[&apos;gateway&apos;] , \ 
+            i[&apos;hostname&apos;] , i[&apos;profile&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;dns_name&apos;] , 
+            str(i[&apos;ctime&apos;]) , str(i[&apos;mtime&apos;])
 ... 
-node166 52:54:00:73:f9:9f 10.47.58.166 10.47.58.1 node166 CentOS-6.5-x86_64 node166 1436496332.01 1436496553.29
+node166 52:54:00:73:f9:9f 10.47.58.166 10.47.58.1 node166 
+CentOS-6.5-x86_64 node166 1436496332.01 1436496553.29
 </code></pre><p>You can also modify and insert node into Cobbler System.    </p>
 <p>Following is the code snippet for insert a system into Cobbler:   </p>
-<pre><code>def insert_system_to_cobbler(NodeName, MacAddress, IpAddress, Gateway, Hostname, Profile, DnsName):
+<pre><code>def insert_system_to_cobbler(NodeName, MacAddress, IpAddress, \ 
+        Gateway, Hostname, Profile, DnsName):
     system_id = CobblerServer.new_system(token)
     CobblerServer.modify_system(system_id, &quot;name&quot;, NodeName, token)
-    CobblerServer.modify_system(system_id, &apos;modify_interface&apos;, {&quot;macaddress-eth0&quot;: MacAddress, &quot;ipaddress-eth0&quot;: IpAddress, &quot;dnsname-eth0&quot;: DnsName,}, token)
+    CobblerServer.modify_system(system_id, &apos;modify_interface&apos;, \ 
+        {&quot;macaddress-eth0&quot;: MacAddress, \ 
+        &quot;ipaddress-eth0&quot;: IpAddress, &quot;dnsname-eth0&quot;: DnsName,}, token)
     CobblerServer.modify_system(system_id, &quot;profile&quot;, Profile, token)
     CobblerServer.modify_system(system_id, &quot;gateway&quot;, Gateway, token)
     CobblerServer.modify_system(system_id, &quot;hostname&quot;, Hostname, token)

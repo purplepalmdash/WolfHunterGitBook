@@ -48,9 +48,11 @@ CentOS6.5 has 2 DVDs, so we import them using following steps:
 3\. Use following commands for importing the second DVD:     
 
 ```
-# rsync -a '/mnt2/' /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/ --exclude-from=/etc/cobbler/rsync.exclude --progress
+# rsync -a '/mnt2/' /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/ \
+  --exclude-from=/etc/cobbler/rsync.exclude --progress
 # COMPSXML=$(ls /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/repodata/*comps*.xml)
-# createrepo -c cache -s sha --update --groupfile ${COMPSXML} /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64
+# createrepo -c cache -s sha --update --groupfile \ 
+  ${COMPSXML} /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64
 ```
 
 4\. Check the result now you could see:  

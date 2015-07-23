@@ -40,4 +40,6 @@ DEVICE="eth0"
 ```
 
 ### End Of This Section
-By assigning the static IP Address, we could more precisely control the deployment.      
+By assigning the static IP Address, we could more precisely control the deployment.  
+
+Later in Cobbler advance topic we will introduce to use Cobbler's rules for controlling the DHCP's fixed IP Address. Now we use static IP Address for next deployment.       

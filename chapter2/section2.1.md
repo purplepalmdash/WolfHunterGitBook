@@ -15,7 +15,8 @@ First disable SElinux via:
 Download repo file , update the cache, and install cobbler, cobbler requires django so we also have to enable epel repository:   
 ```
 # wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
-# wget http://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/CentOS_CentOS-6/home:libertas-ict:cobbler26.repo
+# wget http://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/ \
+  CentOS_CentOS-6/home:libertas-ict:cobbler26.repo
 # cp home\:libertas-ict\:cobbler26.repo /etc/yum.repos.d/cobbler.repo
 # yum install -y cobbler cobbler-web
 ```
@@ -211,12 +212,14 @@ Simply use `cobbler sync` for syncing all of the configurations.
 Check the dhcpd:
 ```
 # ps -ef |grep dhcp
-dhcpd     1911     1  0 17:51 ?        00:00:00 /usr/sbin/dhcpd -user dhcpd -group dhcpd
+dhcpd     1911     1  0 17:51 ?        00:00:00 /usr/sbin/dhcpd 
+     -user dhcpd -group dhcpd
 ```
 Check the tftp server status: 
 ```
 # netstat -anp |grep 69
-udp        0      0 0.0.0.0:69                  0.0.0.0:*                               1488/xinetd         
+udp        0      0 0.0.0.0:69                  0.0.0.0:*      
+  1488/xinetd         
 ```
 
 ### End Of This Section

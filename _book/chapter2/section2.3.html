@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.3" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    <div class="book" data-level="2.3" data-basepath=".." data-revision="Thu Jul 23 2015 16:57:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -893,9 +893,11 @@ CentOS-7.1-x86_64
 </code></pre><p>2. First import DVD1 into Cobbler:    </p>
 <pre><code># cobbler import --name=CentOS-6.5 --arch=x86_64 --path=/mnt
 </code></pre><p>3. Use following commands for importing the second DVD:     </p>
-<pre><code># rsync -a &apos;/mnt2/&apos; /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/ --exclude-from=/etc/cobbler/rsync.exclude --progress
+<pre><code># rsync -a &apos;/mnt2/&apos; /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/ \
+  --exclude-from=/etc/cobbler/rsync.exclude --progress
 # COMPSXML=$(ls /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/repodata/*comps*.xml)
-# createrepo -c cache -s sha --update --groupfile ${COMPSXML} /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64
+# createrepo -c cache -s sha --update --groupfile \ 
+  ${COMPSXML} /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64
 </code></pre><p>4. Check the result now you could see:  </p>
 <pre><code># cobbler profile list
 CentOS-6.5-x86_64

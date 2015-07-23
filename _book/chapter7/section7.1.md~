@@ -38,8 +38,7 @@ Listed all of the distros in Cobbler System:
 >>> for i in CobblerServer.get_distros():
 ...   print i
 ... 
-{'comment': '', 'kernel': '/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/vmlinuz', 'uid': 'MTQzNzM5MTExOC43NDE4NTUyMzEuNjI3NjM', 'kernel_options_post': {}, 'redhat_management_key': '<<inherit>>', 'kernel_options': {}, 'redhat_management_server': '<<inherit>>', 'initrd': '/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/initrd.img', 'mtime': 1437391118.8802841, 'template_files': {}, 'ks_meta': {'tree': 'http://@@http_server@@/cblr/links/CentOS-7.1-x86_64'}, 'boot_files': {}, 'breed': 'redhat', 'os_version': 'rhel7', 'mgmt_classes': [], 'fetchable_files': {}, 'tree_build_time': 0, 'arch': 'x86_64', 'name': 'CentOS-7.1-x86_64', 'owners': ['admin'], 'ctime': 1437391118.744396, 'source_repos': [['http://@@http_server@@/cobbler/ks_mirror/config/CentOS-7.1-x86_64-0.repo', 'http://@@http_server@@/cobbler/ks_mirror/CentOS-7.1-x86_64']], 'depth': 0}
-{'comment': '', 'kernel': '/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/vmlinuz', 'uid': 'MTQzNzM5MTU2OS4wNjExNDMxMzYuMzE0NA', 'kernel_options_post': {}, 'redhat_management_key': '<<inherit>>', 'kernel_options': {}, 'redhat_management_server': '<<inherit>>', 'initrd': '/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/initrd.img', 'mtime': 1437391569.1240139, 'template_files': {}, 'ks_meta': {'tree': 'http://@@http_server@@/cblr/links/CentOS-6.5-x86_64'}, 'boot_files': {}, 'breed': 'redhat', 'os_version': 'rhel6', 'mgmt_classes': [], 'fetchable_files': {}, 'tree_build_time': 0, 'arch': 'x86_64', 'name': 'CentOS-6.5-x86_64', 'owners': ['admin'], 'ctime': 1437391569.0609839, 'source_repos': [['http://@@http_server@@/cobbler/ks_mirror/config/CentOS-6.5-x86_64-0.repo', 'http://@@http_server@@/cobbler/ks_mirror/CentOS-6.5-x86_64']], 'depth': 0}
+....................
 ```
 
 You could change the function of `get_distros()` to `get_profiles()`, then you will get all of the pre-defined profiles.    
@@ -93,9 +92,13 @@ Your could get more information of one single node, following is an example whic
 ```
 >>> for i in server.get_systems():
 ...     if i['name'] == 'node166':
-...         print i['name'] , i['interfaces']['eth0']['mac_address'] , i['interfaces']['eth0']['ip_address'] , i['gateway'] , i['hostname'] , i['profile'] , i['interfaces']['eth0']['dns_name'] , str(i['ctime']) , str(i['mtime'])
+...         print i['name'] , i['interfaces']['eth0']['mac_address'] , \
+            i['interfaces']['eth0']['ip_address'] , i['gateway'] , \ 
+            i['hostname'] , i['profile'] , i['interfaces']['eth0']['dns_name'] , 
+            str(i['ctime']) , str(i['mtime'])
 ... 
-node166 52:54:00:73:f9:9f 10.47.58.166 10.47.58.1 node166 CentOS-6.5-x86_64 node166 1436496332.01 1436496553.29
+node166 52:54:00:73:f9:9f 10.47.58.166 10.47.58.1 node166 
+CentOS-6.5-x86_64 node166 1436496332.01 1436496553.29
 ```
 
 You can also modify and insert node into Cobbler System.    
@@ -103,10 +106,13 @@ You can also modify and insert node into Cobbler System.
 Following is the code snippet for insert a system into Cobbler:   
 
 ```
-def insert_system_to_cobbler(NodeName, MacAddress, IpAddress, Gateway, Hostname, Profile, DnsName):
+def insert_system_to_cobbler(NodeName, MacAddress, IpAddress, \ 
+        Gateway, Hostname, Profile, DnsName):
 	system_id = CobblerServer.new_system(token)
 	CobblerServer.modify_system(system_id, "name", NodeName, token)
-	CobblerServer.modify_system(system_id, 'modify_interface', {"macaddress-eth0": MacAddress, "ipaddress-eth0": IpAddress, "dnsname-eth0": DnsName,}, token)
+	CobblerServer.modify_system(system_id, 'modify_interface', \ 
+        {"macaddress-eth0": MacAddress, \ 
+        "ipaddress-eth0": IpAddress, "dnsname-eth0": DnsName,}, token)
 	CobblerServer.modify_system(system_id, "profile", Profile, token)
 	CobblerServer.modify_system(system_id, "gateway", Gateway, token)
 	CobblerServer.modify_system(system_id, "hostname", Hostname, token)
