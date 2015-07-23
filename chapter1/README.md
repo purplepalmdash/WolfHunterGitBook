@@ -44,7 +44,8 @@ virt-manager-1.1.0-12.el7.noarch
 Or, on Ubuntu14.04, use following command for checking:    
 ```
 $ dpkg -l | grep virt-manager
-ii  virt-manager                                          0.9.5-1ubuntu3                                      all          desktop application for managing virtual machines
+ii  virt-manager                        0.9.5-1ubuntu3
+all          desktop application for managing virtual machines
 ```
 
 If everything goes well, we can start to deploy system now.   
