@@ -1,0 +1,33 @@
+## Python Web Framework
+Being a tool, its `ease of use` is very important for its spread. So in this section we will introduce a simple yet powerful web-framework for making the web interface for integration of Cobbler and Ansible.   
+
+### Prepare
+
+```
+# yum install -y gcc python-pip python-devel
+# pip install bottle ansible 
+```
+
+### Bottle
+Bottle is a fast, simple and lightweight WSGI micro web-framework for Python, its website is:   
+[http://www.bottlepy.org](http://www.bottlepy.org)    
+
+You could follow the tutorial here for setting up a simple webserver:   
+[http://bottlepy.org/docs/dev/index.html](http://bottlepy.org/docs/dev/index.html)   
+
+### Using Bottle For Integration
+We implemented following web routers in our python script:    
+
+listsystem: list all of the installed node information in Cobbler.     
+newsystem:  Add a new node into Cobbler.      
+Node/nodename: Page for serving a single node during its deployment.     
+Deploy/nodename: Page for serving the deploying node.    
+
+These pages could be beautified using different js or css framework. Currently they didn't been prettified too much.   
+
+### Deployment Thread
+A Thread has been imported for serving the deployment precedure.    
+In this thread we could directly call one play-book, and let it run the deployment for us.   
+
+### End Of The Section
+We use Bottle for combine the Cobbler/Ansible and provide the end-user a simple WEB UI. This provides a start-point for invoving more functionality.     

@@ -1,0 +1,991 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Cobbler API | Use Cobbler And Ansible For Deploying CloudStack</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter7/section7.2.html" />
+    
+    
+    <link rel="prev" href="../chapter7/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1/index.html">
+            
+                
+                    <a href="../chapter1/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Environment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/section1.1.html">
+            
+                
+                    <a href="../chapter1/section1.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        ISOs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/section1.2.html">
+            
+                
+                    <a href="../chapter1/section1.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Network Environment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/section1.3.html">
+            
+                
+                    <a href="../chapter1/section1.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        WolfHunter Root Machine
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/section1.4.html">
+            
+                
+                    <a href="../chapter1/section1.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Check Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/index.html">
+            
+                
+                    <a href="../chapter2/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Cobbler Server
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter2/section2.1.html">
+            
+                
+                    <a href="../chapter2/section2.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Setup Cobbler Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter2/section2.2.html">
+            
+                
+                    <a href="../chapter2/section2.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Cobbler Web
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section2.3.html">
+            
+                
+                    <a href="../chapter2/section2.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Import ISOs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter2/section2.4.html">
+            
+                
+                    <a href="../chapter2/section2.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Deploy Your First Node
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3/index.html">
+            
+                
+                    <a href="../chapter3/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Ansible
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter3/section3.1.html">
+            
+                
+                    <a href="../chapter3/section3.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Setup Ansible Node
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter3/section3.2.html">
+            
+                
+                    <a href="../chapter3/section3.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Powerful Playbooks
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4/index.html">
+            
+                
+                    <a href="../chapter4/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Deploy CloudStack(Manual)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter4/section4.1.html">
+            
+                
+                    <a href="../chapter4/section4.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Node Preparation
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapter4/section4.2.html">
+            
+                
+                    <a href="../chapter4/section4.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Node Static IP
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chapter4/section4.3.html">
+            
+                
+                    <a href="../chapter4/section4.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        CloudStack Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="chapter4/section4.4.html">
+            
+                
+                    <a href="../chapter4/section4.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        CloudStack Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="chapter4/section4.5.html">
+            
+                
+                    <a href="../chapter4/section4.5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Setup Secondary Storage
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="chapter4/section4.6.html">
+            
+                
+                    <a href="../chapter4/section4.6.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Configure CloudStack
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5/index.html">
+            
+                
+                    <a href="../chapter5/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Ease Your Deployment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter5/section5.1.html">
+            
+                
+                    <a href="../chapter5/section5.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Download Packages
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chapter5/section5.2.html">
+            
+                
+                    <a href="../chapter5/section5.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Create Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chapter5/section5.3.html">
+            
+                
+                    <a href="../chapter5/section5.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Using Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chapter5/section5.4.html">
+            
+                
+                    <a href="../chapter5/section5.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        PIP Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6/index.html">
+            
+                
+                    <a href="../chapter6/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Deploy CloudStack(The Ansible Way)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter6/section6.1.html">
+            
+                
+                    <a href="../chapter6/section6.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ansible Resources
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="chapter6/section6.2.html">
+            
+                
+                    <a href="../chapter6/section6.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Deploy CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="chapter6/section6.3.html">
+            
+                
+                    <a href="../chapter6/section6.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Playbooks For CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter6/section6.4.html">
+            
+                
+                    <a href="../chapter6/section6.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Deploy CS Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="chapter6/section6.5.html">
+            
+                
+                    <a href="../chapter6/section6.5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Playbooks For CS Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7/index.html">
+            
+                
+                    <a href="../chapter7/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Combine Cobbler and Ansible
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1" data-path="chapter7/section7.1.html">
+            
+                
+                    <a href="../chapter7/section7.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Cobbler API
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="chapter7/section7.2.html">
+            
+                
+                    <a href="../chapter7/section7.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Python And Ansible
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="chapter7/section7.3.html">
+            
+                
+                    <a href="../chapter7/section7.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Python Web Framework
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="chapter7/section7.4.html">
+            
+                
+                    <a href="../chapter7/section7.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        More Intelligent!
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter8/index.html">
+            
+                
+                    <a href="../chapter8/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        WolfHunter Deployment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="chapter8/section8.1.html">
+            
+                
+                    <a href="../chapter8/section8.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        WolfHunter Folder
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="chapter8/section8.2.html">
+            
+                
+                    <a href="../chapter8/section8.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        CS Management Node Deployment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="chapter8/section8.3.html">
+            
+                
+                    <a href="../chapter8/section8.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Agent Node
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter9/index.html">
+            
+                
+                    <a href="../chapter9/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        WolfHunter Advanced
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="chapter9/section9.1.html">
+            
+                
+                    <a href="../chapter9/section9.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        No DHCP Situation
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="chapter9/section9.2.html">
+            
+                
+                    <a href="../chapter9/section9.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        Static IP Situation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Use Cobbler And Ansible For Deploying CloudStack</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="cobbler-api">Cobbler API</h2>
+<p>Two useful material for Cobbler API is listed as following:<br><a href="https://fedorahosted.org/cobbler/wiki/CobblerApi" target="_blank">https://fedorahosted.org/cobbler/wiki/CobblerApi</a><br><a href="https://fedorahosted.org/cobbler/wiki/CobblerXmlrpc" target="_blank">https://fedorahosted.org/cobbler/wiki/CobblerXmlrpc</a>    </p>
+<p>You could get more detailed infos from the above two links. We won&apos;t talk too much on which APIs to choose here. </p>
+<p>We Choose <code>XMLRPC API for Cobbler</code> for development, because it&apos;s pretty straight-forward and simple.    </p>
+<h3 id="about-xmlrpc">About XMLRPC</h3>
+<p>The introduction is directly from Cobbler API:    </p>
+<p>XMLRPC is a lightweight way for computer programs written in various languages to interact over the network. See <a href="http://www.xmlrpc.com" target="_blank">http://www.xmlrpc.com/</a>.    </p>
+<p>You should use the XMLRPC API for Cobbler if:</p>
+<ul>
+<li>You want to talk to Cobbler and you are not a Python application/script</li>
+<li>You want to talk to Cobbler and are not running on the Cobbler server</li>
+<li>You are a non-GPLd application that wants to talk to Cobbler that is to be distributed to the public or customers</li>
+</ul>
+<h3 id="begin-talk-to-cobbler">Begin Talk to Cobbler</h3>
+<p>Notice: All of these operations are done under python intepreter.     </p>
+<p>Create the CobblerServer instance and token:    </p>
+<pre><code># python
+Python 2.6.6 (r266:84292, Jan 22 2014, 09:42:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; import xmlrpclib
+&gt;&gt;&gt; CobblerServer = xmlrpclib.Server(&quot;http://127.0.0.1/cobbler_api&quot;)
+&gt;&gt;&gt; token = CobblerServer.login(&quot;cobbler&quot;, &quot;engine&quot;)
+</code></pre><p>Listed all of the distros in Cobbler System:    </p>
+<pre><code>&gt;&gt;&gt; for i in CobblerServer.get_distros():
+...   print i
+... 
+{&apos;comment&apos;: &apos;&apos;, &apos;kernel&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/vmlinuz&apos;, &apos;uid&apos;: &apos;MTQzNzM5MTExOC43NDE4NTUyMzEuNjI3NjM&apos;, &apos;kernel_options_post&apos;: {}, &apos;redhat_management_key&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;kernel_options&apos;: {}, &apos;redhat_management_server&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;initrd&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/initrd.img&apos;, &apos;mtime&apos;: 1437391118.8802841, &apos;template_files&apos;: {}, &apos;ks_meta&apos;: {&apos;tree&apos;: &apos;http://@@http_server@@/cblr/links/CentOS-7.1-x86_64&apos;}, &apos;boot_files&apos;: {}, &apos;breed&apos;: &apos;redhat&apos;, &apos;os_version&apos;: &apos;rhel7&apos;, &apos;mgmt_classes&apos;: [], &apos;fetchable_files&apos;: {}, &apos;tree_build_time&apos;: 0, &apos;arch&apos;: &apos;x86_64&apos;, &apos;name&apos;: &apos;CentOS-7.1-x86_64&apos;, &apos;owners&apos;: [&apos;admin&apos;], &apos;ctime&apos;: 1437391118.744396, &apos;source_repos&apos;: [[&apos;http://@@http_server@@/cobbler/ks_mirror/config/CentOS-7.1-x86_64-0.repo&apos;, &apos;http://@@http_server@@/cobbler/ks_mirror/CentOS-7.1-x86_64&apos;]], &apos;depth&apos;: 0}
+{&apos;comment&apos;: &apos;&apos;, &apos;kernel&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/vmlinuz&apos;, &apos;uid&apos;: &apos;MTQzNzM5MTU2OS4wNjExNDMxMzYuMzE0NA&apos;, &apos;kernel_options_post&apos;: {}, &apos;redhat_management_key&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;kernel_options&apos;: {}, &apos;redhat_management_server&apos;: &apos;&lt;&lt;inherit&gt;&gt;&apos;, &apos;initrd&apos;: &apos;/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/initrd.img&apos;, &apos;mtime&apos;: 1437391569.1240139, &apos;template_files&apos;: {}, &apos;ks_meta&apos;: {&apos;tree&apos;: &apos;http://@@http_server@@/cblr/links/CentOS-6.5-x86_64&apos;}, &apos;boot_files&apos;: {}, &apos;breed&apos;: &apos;redhat&apos;, &apos;os_version&apos;: &apos;rhel6&apos;, &apos;mgmt_classes&apos;: [], &apos;fetchable_files&apos;: {}, &apos;tree_build_time&apos;: 0, &apos;arch&apos;: &apos;x86_64&apos;, &apos;name&apos;: &apos;CentOS-6.5-x86_64&apos;, &apos;owners&apos;: [&apos;admin&apos;], &apos;ctime&apos;: 1437391569.0609839, &apos;source_repos&apos;: [[&apos;http://@@http_server@@/cobbler/ks_mirror/config/CentOS-6.5-x86_64-0.repo&apos;, &apos;http://@@http_server@@/cobbler/ks_mirror/CentOS-6.5-x86_64&apos;]], &apos;depth&apos;: 0}
+</code></pre><p>You could change the function of <code>get_distros()</code> to <code>get_profiles()</code>, then you will get all of the pre-defined profiles.    </p>
+<h3 id="get-more-detailed-info">Get More detailed info</h3>
+<p>It&apos;s pretty easy to fetch the specified value out of the dictionary, for example we want to fetch all of the kernel info of distros, we only use follow command:    </p>
+<pre><code>&gt;&gt;&gt; for i in CobblerServer.get_distros():
+...    print i[&apos;kernel&apos;]
+... 
+/var/www/cobbler/ks_mirror/CentOS-7.1-x86_64/images/pxeboot/vmlinuz
+/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/images/pxeboot/vmlinuz
+</code></pre><h3 id="more-infos">More Infos</h3>
+<p>Example:    </p>
+<pre><code>#!/usr/bin/python
+import xmlrpclib
+server = xmlrpclib.Server(&quot;http://127.0.0.1/cobbler_api&quot;)
+server = xmlrpclib.Server(&quot;http://127.0.0.1/cobbler_api&quot;)
+print server.get_distros()
+print server.get_profiles()
+print server.get_systems()
+print server.get_images()
+print server.get_repos()
+</code></pre><h3 id="use-cobbler-api-for-managing-node-info">Use Cobbler API For Managing Node Info</h3>
+<p>Every defined host machine records itself in Cobbler System, list all of the system&apos;s name :   </p>
+<pre><code>&gt;&gt;&gt; for i in CobblerServer.get_systems():
+...   print i[&apos;name&apos;]
+... 
+DoSomething
+node163
+NodeAddedViaWeb
+node115
+node114
+node117
+node116
+node113
+.....
+</code></pre><p>Your could get more information of one single node, following is an example which shows the name, macaddress, ip address, etc information which could be fetched back from Cobbler API:   </p>
+<pre><code>&gt;&gt;&gt; for i in server.get_systems():
+...     if i[&apos;name&apos;] == &apos;node166&apos;:
+...         print i[&apos;name&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;mac_address&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;ip_address&apos;] , i[&apos;gateway&apos;] , i[&apos;hostname&apos;] , i[&apos;profile&apos;] , i[&apos;interfaces&apos;][&apos;eth0&apos;][&apos;dns_name&apos;] , str(i[&apos;ctime&apos;]) , str(i[&apos;mtime&apos;])
+... 
+node166 52:54:00:73:f9:9f 10.47.58.166 10.47.58.1 node166 CentOS-6.5-x86_64 node166 1436496332.01 1436496553.29
+</code></pre><p>You can also modify and insert node into Cobbler System.    </p>
+<p>Following is the code snippet for insert a system into Cobbler:   </p>
+<pre><code>def insert_system_to_cobbler(NodeName, MacAddress, IpAddress, Gateway, Hostname, Profile, DnsName):
+    system_id = CobblerServer.new_system(token)
+    CobblerServer.modify_system(system_id, &quot;name&quot;, NodeName, token)
+    CobblerServer.modify_system(system_id, &apos;modify_interface&apos;, {&quot;macaddress-eth0&quot;: MacAddress, &quot;ipaddress-eth0&quot;: IpAddress, &quot;dnsname-eth0&quot;: DnsName,}, token)
+    CobblerServer.modify_system(system_id, &quot;profile&quot;, Profile, token)
+    CobblerServer.modify_system(system_id, &quot;gateway&quot;, Gateway, token)
+    CobblerServer.modify_system(system_id, &quot;hostname&quot;, Hostname, token)
+    # After modify, sync them to the system
+    CobblerServer.save_system(system_id, token)
+    # Don&apos;t forget to sync
+    CobblerServer.sync(token)
+</code></pre><h3 id="end-of-the-section">End Of The Section</h3>
+<p>In this seciton we&apos;ve introduced the way of using cobbler API to talk to Cobbler system. By using Cobbler&apos;s xmlrpc API we could easily integrate Cobbler with different languages.    </p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter7/index.html" class="navigation navigation-prev " aria-label="Previous page: Combine Cobbler and Ansible"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter7/section7.2.html" class="navigation navigation-next " aria-label="Next page: Python And Ansible"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

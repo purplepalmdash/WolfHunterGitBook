@@ -1,0 +1,61 @@
+## CS Management Node Deployment
+
+### Installation  
+Create the vm, customize its networking, and mark down its mac address:   
+
+![../images/2015_07_23_11_49_06_661x242.jpg](../images/2015_07_23_11_49_06_661x242.jpg)   
+
+Open a browser and point fill in the infos:    
+
+![../images/2015_07_23_11_53_03_326x361.jpg](../images/2015_07_23_11_53_03_326x361.jpg)   
+
+Press `Add` button, the webpage will enter `waiting` status.    
+
+![../images/2015_07_23_11_54_42_601x180.jpg](../images/2015_07_23_11_54_42_601x180.jpg)    
+
+And press the `start installation` button on virt-manager, begin to install:    
+
+![../images/2015_07_23_11_55_45_406x196.jpg](../images/2015_07_23_11_55_45_406x196.jpg)    
+
+After deployment, you will see the webpage turns into:    
+
+![../images/2015_07_23_11_59_55_330x339.jpg](../images/2015_07_23_11_59_55_330x339.jpg)    
+
+### Verify the installed node
+No-password login, and verify its ip address and hostname;   
+
+```
+# ssh root@10.15.33.150
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.15.33.150' (RSA) to the list of known hosts.
+[root@node150 ~]# hostname
+node150
+[root@node150 ~]# ifconfig eth0
+eth0      Link encap:Ethernet  HWaddr 52:54:00:A6:F4:A3  
+          inet addr:10.15.33.150  Bcast:10.15.33.255  Mask:255.255.255.0
+....
+```
+
+### Playbooks
+Choose whichever playbook you want to deploy on this node, click the button and wait.    
+Your webpage turns into:   
+
+![../images/2015_07_23_12_03_18_593x195.jpg](../images/2015_07_23_12_03_18_593x195.jpg)    
+
+And the server output is like:    
+
+![../images/2015_07_23_12_04_59_588x509.jpg](../images/2015_07_23_12_04_59_588x509.jpg)     
+
+After finish, you will see the page turns into:   
+
+![../images/2015_07_23_12_08_25_432x211.jpg](../images/2015_07_23_12_08_25_432x211.jpg)    
+
+And the Server output turns:   
+![../images/2015_07_23_12_08_14_642x527.jpg](../images/2015_07_23_12_08_14_642x527.jpg)    
+
+Verify the installation:    
+
+![../images/2015_07_23_12_31_06_497x290.jpg](../images/2015_07_23_12_31_06_497x290.jpg)    
+
+### End Of The Section
+In this section we deployed CloudStack Management Node, together with next section's CloudStack Agent Node we could set up the whole CloudStack environment.    

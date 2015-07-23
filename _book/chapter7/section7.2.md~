@@ -1,0 +1,8 @@
+## Python And Ansible
+Ansible is written in Python, so it's pretty easy to interactive with ansible using python.   
+
+There are many reference materials which could be found via Google. We mainly refers to following link:    
+
+[https://serversforhackers.com/running-ansible-programmatically](https://serversforhackers.com/running-ansible-programmatically)     
+
+[http://yumaojun03.gotoip55.com/?p=1264](http://yumaojun03.gotoip55.com/?p=1264)    

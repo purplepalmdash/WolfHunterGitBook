@@ -1,0 +1,1326 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Playbooks For CS Management | Use Cobbler And Ansible For Deploying CloudStack</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter6/section6.4.html" />
+    
+    
+    <link rel="prev" href="../chapter6/section6.2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="6.3" data-basepath=".." data-revision="Thu Jul 23 2015 15:57:27 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1/index.html">
+            
+                
+                    <a href="../chapter1/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Environment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/section1.1.html">
+            
+                
+                    <a href="../chapter1/section1.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        ISOs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/section1.2.html">
+            
+                
+                    <a href="../chapter1/section1.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Network Environment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/section1.3.html">
+            
+                
+                    <a href="../chapter1/section1.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        WolfHunter Root Machine
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/section1.4.html">
+            
+                
+                    <a href="../chapter1/section1.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Check Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/index.html">
+            
+                
+                    <a href="../chapter2/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Cobbler Server
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter2/section2.1.html">
+            
+                
+                    <a href="../chapter2/section2.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Setup Cobbler Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter2/section2.2.html">
+            
+                
+                    <a href="../chapter2/section2.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Cobbler Web
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section2.3.html">
+            
+                
+                    <a href="../chapter2/section2.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Import ISOs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter2/section2.4.html">
+            
+                
+                    <a href="../chapter2/section2.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Deploy Your First Node
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3/index.html">
+            
+                
+                    <a href="../chapter3/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Ansible
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter3/section3.1.html">
+            
+                
+                    <a href="../chapter3/section3.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Setup Ansible Node
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter3/section3.2.html">
+            
+                
+                    <a href="../chapter3/section3.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Powerful Playbooks
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4/index.html">
+            
+                
+                    <a href="../chapter4/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Deploy CloudStack(Manual)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter4/section4.1.html">
+            
+                
+                    <a href="../chapter4/section4.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Node Preparation
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapter4/section4.2.html">
+            
+                
+                    <a href="../chapter4/section4.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Node Static IP
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chapter4/section4.3.html">
+            
+                
+                    <a href="../chapter4/section4.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        CloudStack Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="chapter4/section4.4.html">
+            
+                
+                    <a href="../chapter4/section4.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        CloudStack Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="chapter4/section4.5.html">
+            
+                
+                    <a href="../chapter4/section4.5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Setup Secondary Storage
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="chapter4/section4.6.html">
+            
+                
+                    <a href="../chapter4/section4.6.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Configure CloudStack
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5/index.html">
+            
+                
+                    <a href="../chapter5/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Ease Your Deployment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter5/section5.1.html">
+            
+                
+                    <a href="../chapter5/section5.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Download Packages
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chapter5/section5.2.html">
+            
+                
+                    <a href="../chapter5/section5.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Create Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chapter5/section5.3.html">
+            
+                
+                    <a href="../chapter5/section5.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Using Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chapter5/section5.4.html">
+            
+                
+                    <a href="../chapter5/section5.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        PIP Local Repo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6/index.html">
+            
+                
+                    <a href="../chapter6/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Deploy CloudStack(The Ansible Way)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter6/section6.1.html">
+            
+                
+                    <a href="../chapter6/section6.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ansible Resources
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="chapter6/section6.2.html">
+            
+                
+                    <a href="../chapter6/section6.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Deploy CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3" data-path="chapter6/section6.3.html">
+            
+                
+                    <a href="../chapter6/section6.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Playbooks For CS Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter6/section6.4.html">
+            
+                
+                    <a href="../chapter6/section6.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Deploy CS Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="chapter6/section6.5.html">
+            
+                
+                    <a href="../chapter6/section6.5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Playbooks For CS Agent
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7/index.html">
+            
+                
+                    <a href="../chapter7/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Combine Cobbler and Ansible
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="chapter7/section7.1.html">
+            
+                
+                    <a href="../chapter7/section7.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Cobbler API
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="chapter7/section7.2.html">
+            
+                
+                    <a href="../chapter7/section7.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Python And Ansible
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="chapter7/section7.3.html">
+            
+                
+                    <a href="../chapter7/section7.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Python Web Framework
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="chapter7/section7.4.html">
+            
+                
+                    <a href="../chapter7/section7.4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        More Intelligent!
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter8/index.html">
+            
+                
+                    <a href="../chapter8/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        WolfHunter Deployment
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="chapter8/section8.1.html">
+            
+                
+                    <a href="../chapter8/section8.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        WolfHunter Folder
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="chapter8/section8.2.html">
+            
+                
+                    <a href="../chapter8/section8.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        CS Management Node Deployment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="chapter8/section8.3.html">
+            
+                
+                    <a href="../chapter8/section8.3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Agent Node
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter9/index.html">
+            
+                
+                    <a href="../chapter9/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        WolfHunter Advanced
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="chapter9/section9.1.html">
+            
+                
+                    <a href="../chapter9/section9.1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        No DHCP Situation
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="chapter9/section9.2.html">
+            
+                
+                    <a href="../chapter9/section9.2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        Static IP Situation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Use Cobbler And Ansible For Deploying CloudStack</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="ansible-playbooks-for-cs-management">Ansible Playbooks For CS Management</h2>
+<h3 id="45csmanagement-yml">45CSManagement.yml</h3>
+<pre><code># cat 45CSManagement.yml
+- name: CloudStack Installation Playbook(Version 4.5)
+  hosts: all
+
+  #######################################################################################
+  # Vars
+  #
+  vars:
+    CSVersion:
+      - 4.5
+
+    MySQLPass:
+      - engine
+
+    CloudDBPass:
+      - engine
+
+    NTPServers:
+      - 0.uk.pool.ntp.org
+      - 1.uk.pool.ntp.org
+      - 2.uk.pool.ntp.org
+      - 3.uk.pool.ntp.org
+
+    CSMySQL:
+      MySQLRoot: root
+      CloudDBUser: cloud
+      CloudDBHost: localhost
+      MaxConnections: 700
+      BindAddress: 0.0.0.0
+
+    CSManagement:
+      ManagementIP: 10.15.33.153
+      SecondaryMount: /secondary
+      NFSHost: 10.15.33.2
+      NFSSecondaryShare: /home/exports
+      SysTemplateURLurl45: http://10.15.33.2/repo/systemvm64template-4.5-kvm.qcow2.bz2
+      SysTemplateURLhv: kvm
+
+  #######################################################################################
+  # Tasks
+  #
+  tasks:
+
+    #######################################################
+    # Fail if not ran on CentOS
+    # Delete or comment out to bypass.
+    #
+    - name: Check guest OS version
+      fail: msg=&quot;WARNING - CloudStack playbook written for CentOS (OS detected {{ ansible_distribution }}).&quot;
+      when: ansible_distribution != &quot;CentOS&quot; 
+      tags:
+        - base
+        - mysql
+        - csmanagement
+        - csmanagementadd
+        - pip
+
+    #######################################################
+    # Configure Repository For PIP
+    #
+    - name: Copy To Destination
+      copy: src=templates/pipcache2.tar.gz dest=/root/pipcache2.tar.gz owner=root group=root mode=0644
+      tags:
+        - pipCopy
+        - pip
+
+    #######################################################
+    # Tar tar.gz to Destination place
+    #
+    - name: Tar Remotely
+      shell: tar xzvf /root/pipcache2.tar.gz
+      tags:
+        - pipUntar
+        - pip
+
+
+    #######################################################
+    #  Configure CloudStack yum repo 
+    #
+    - name: Configure CloudStack repo
+      template: src=templates/45CSC6Manage.repo.j2 dest=/etc/yum.repos.d/cloudstack.repo mode=0644
+      tags:
+        - base
+        - yumrepo
+
+    #######################################################
+    #  Remove CentOS Repo
+    #
+    - name: Remove CentOS Repo
+      shell: mv -f /etc/yum.repos.d/CentOS-* /root/ 2&gt;/dev/null
+      ignore_errors: yes
+      tags:
+        - base
+        - ClearCentOSRepo
+
+    #######################################################
+    #  Re-make Repo Cache
+    #
+    - name: Re-generate the repository cache
+      shell: yum clean all &amp;&amp; yum makecache
+      tags:
+        - base
+        - ReGenerateCache
+
+
+    #######################################################
+    # Configure NTP
+    #
+    - name: Install NTP
+      yum: name=ntp state=present
+      tags:
+        - ntp
+        - base
+
+    - name: Configure NTP file
+      template: src=templates/ntp.conf.j2 dest=/etc/ntp.conf
+      notify: restart ntp
+      tags:
+        - ntp
+        - base
+
+    - name: Start the NTP daemon
+      service: name=ntpd state=started enabled=true
+      tags:
+        - ntp
+        - base
+
+    #######################################################
+    # Configure Hosts
+    #
+    - name: Configure Hosts
+      # shell: ifconfig | awk -v MYHOST=$HOSTNAME &apos;/inet addr/{print substr($2,6),&quot;\t&quot;,MYHOST}&apos;&gt;&gt;/etc/hosts
+      shell: ifconfig | awk -v MYHOST=`hostname --fqdn` &apos;/inet addr/{print substr($2,6),&quot;\t&quot;,MYHOST}&apos;&gt;&gt;/etc/hosts
+      tags:
+        - ConfigureHosts
+        - base
+
+    #######################################################
+    # Configure Pre SElinux settings
+    #
+    - name: Before Set SELinux to permissive, install libselinux-python
+      yum: name=libselinux-python state=present
+      tags:
+        - beforeselinux
+        - base
+
+    #######################################################
+    # Configure SElinux settings
+    #
+    - name: Set SELinux to permissive
+      selinux: policy=targeted state=permissive
+      tags:
+        - selinux
+        - base
+
+    #######################################################
+    #  Install additional RPMs: EPEL repo, python-pip 
+    #  (required for cloudmonkey), vim
+    #
+    - name: Install python-pip / vim
+      yum: name={{ item }} state=present
+      with_items:
+        - python-pip
+        - vim
+      tags:
+        - base
+
+    #######################################################
+    # Copy .my.cnf to destination
+    - name: copy .my.cnf file with root password credentials
+      template: src=templates/root/.my.cnf dest=/root/.my.cnf owner=root mode=0600
+
+    #- name: copy .my.cnf file with root password credentials
+    #  template: src=templates/root/.my.cnf dest=/etc/my.cnf owner=root mode=0600
+
+    #######################################################
+    # Install and configure MySQL
+    #
+    - name: Install MySQL server
+      yum: name=mysql-server state=present
+      tags:
+        - mysql
+
+    - name: Install MySQL python module
+      yum: name=MySQL-python state=present
+      tags:
+        - mysql
+
+    #######################################################
+    #  Append CloudStack specific settings to my.cnf
+    #
+    - name: Append CloudStack specific settings to my.cnf
+      lineinfile: dest=/etc/my.cnf
+                  insertbefore=&quot;^\[mysqld_safe\]&quot;
+                  line=&quot;# CloudStack MySQL settings\\ninnodb_rollback_on_timeout=1\\ninnodb_lock_wait_timeout=600\\nmax_connections={{ CSMySQL.MaxConnections }}\\nlog-bin=mysql-bin\\nbinlog-format = \\&apos;ROW\\&apos;\\nbind-address={{ CSMySQL.BindAddress }}\\n&quot;
+                  state=present
+      tags:
+        - mysql
+
+    #######################################################
+    # Start MySQL
+    #
+    - name: Start the MySQL daemon
+      service: name=mysqld state=started enabled=true
+      tags:
+        - mysql
+
+    #######################################################
+    # mysql_secure_installation
+    #
+    - name: Remove anonymous MySQL user for {{ ansible_hostname }}
+      action: mysql_user user=&quot;&quot; host=&quot;{{ ansible_hostname }}&quot; state=&quot;absent&quot;
+      tags:
+        - mysql
+        - securemysql
+
+    - name: Remove anonymous MySQL user for {{ ansible_fqdn }}
+      action: mysql_user user=&quot;&quot; host=&quot;{{ ansible_fqdn }}&quot; state=&quot;absent&quot;
+      tags:
+        - mysql
+        - securemysql
+
+    - name: Remove anonymous MySQL user for localhost
+      action: mysql_user user=&quot;&quot; state=&quot;absent&quot;
+      tags:
+        - mysql
+        - securemysql
+
+    - name: Remove the MySQL test DB
+      action: mysql_db db=test state=absent
+      tags:
+        - mysql
+        - securemysql
+
+    - name: Secure MySQL installation / change root user password
+      mysql_user: login_user=root
+                  login_password=&apos;&apos;
+                  name=root
+                  password={{ MySQLPass | mandatory }} 
+                  priv=*.*:ALL,GRANT
+                  host={{ item }}
+      with_items:
+        # - &quot;{{ ansible_hostname }}&quot;
+        # - &quot;{{ ansible_fqdn }}&quot;
+        # - 127.0.0.1
+        # - ::1
+        - localhost
+      tags:
+        - mysql
+        - securemysql
+
+
+    #######################################################
+    # Open iptables port 3306, use when MySQL on separate server
+    #
+    - name: Open MySQL tcp 3306
+      shell: iptables -A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT
+      notify: 
+        - save iptables
+      tags:
+        - mysql3306
+
+
+    ########################################################
+    # Install CloudStack Management server
+    #
+    - name: Confirm CloudStack installation
+      debug: msg=&quot;Installing CloudStack {{ CSVersion | mandatory }}&quot;
+      tags:
+        - csmanagement
+        - csmanagementadd
+
+    - name: Install CloudStack management server
+      yum: name=cloudstack-management state=present
+      tags:
+        - csmanagement
+        - csmanagementadd
+
+    #######################################################
+    # Install cloudmonkey
+    #
+    - name: Install CloudMonkey
+      shell: pip install --no-index --find-links /root/pipcache2 argparse &amp;&amp; pip install --no-index --find-links /root/pipcache2 argcomplete &amp;&amp; pip install --no-index --find-links /root/pipcache2 requests &amp;&amp; pip install --no-index --find-links /root/pipcache2 argcomplete &amp;&amp; pip install --no-index --find-links /root/pipcache2 prettytable &amp;&amp; pip install --no-index --find-links /root/pipcache2 Pygments &amp;&amp; pip install --no-index --find-links /root/pipcache2 cloudmonkey
+      tags:
+        - csmanagement
+        - csmanagementadd
+        - cloudmonkey
+
+    #######################################################
+    # Configure CloudStack DB
+    #
+    - name: Configure CloudStack database connectvity
+      shell: cloudstack-setup-databases {{ CSMySQL.CloudDBUser }}:{{ CloudDBPass | mandatory }}@{{ CSMySQL.CloudDBHost }} --deploy-as={{ CSMySQL.MySQLRoot }}:{{ MySQLPass | mandatory }} -i `ifconfig | sed -En &apos;s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p&apos;`&gt;&gt; /root/cs_dbinstall.out 2&gt;&amp;1
+      tags:
+        - csmanagement
+
+    #######################################################
+    # Configure CloudStack DB on additional management server
+    #
+    - name: Configure CloudStack database connectvity on additional management server
+      #shell: cloudstack-setup-databases {{ CSMySQL.CloudDBUser }}:{{ CloudDBPass | mandatory }}@{{ CSMySQL.CloudDBHost }} -i {{ CSManagement.ManagementIP  }}&gt;&gt; /root/cs_dbinstall.out 2&gt;&amp;1
+      shell: cloudstack-setup-databases {{ CSMySQL.CloudDBUser }}:{{ CloudDBPass | mandatory }}@{{ CSMySQL.CloudDBHost }} -i `ifconfig | sed -En &apos;s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p&apos;`&gt;&gt; /root/cs_dbinstall.out 2&gt;&amp;1
+      tags:
+        - csmanagementadd
+
+    #######################################################
+    # Configure Management server
+    - name: Configure CloudStack management server
+      shell: cloudstack-setup-management &gt;&gt; /root/cs_mgmtinstall.out 2&gt;&amp;1
+      tags:
+        - csmanagement
+        - csmanagementadd
+
+    #######################################################
+    # Mount secondary NFS share and install system VM 
+    # template. Check size of mounted folder before 
+    # installation to ensure previous data not being
+    # overwritten.
+    #
+    - name: Mount NFS secondary storage
+      mount: name={{ CSManagement.SecondaryMount }} src={{ CSManagement.NFSHost }}:{{ CSManagement.NFSSecondaryShare}} fstype=nfs state=mounted
+      tags:
+        - csmanagement
+        - secstorage
+
+    - name: Check size of mounted secondary storage template folder
+      shell: du {{ CSManagement.SecondaryMount }}/template/ --max-depth=0 | awk &apos;{print $1}&apos;
+      register: TemplateFolderSize
+      tags:
+        - csmanagement
+        - secstorage
+
+    #######################################################
+    # Download and install CS45 system VM template
+    #
+    - name: Download CloudStack 4.5 system template
+      shell: /usr/share/cloudstack-common/scripts/storage/secondary/cloud-install-sys-tmplt -m {{ CSManagement.SecondaryMount }} -u {{ CSManagement.SysTemplateURLurl45 }} -h {{ CSManagement.SysTemplateURLhv }} -F
+      tags:
+        - csmanagement
+        - secstorage
+
+    #######################################################
+    # Unmount NFS share
+    #
+    - name: Umount NFS secondary storage
+      mount: name={{ CSManagement.SecondaryMount }} src={{ CSManagement.NFSHost }}:{{ CSManagement.NFSSecondaryShare}} fstype=nfs state=absent
+      tags:
+        - csmanagement
+        - secstorage
+
+  #########################################################################################
+  # CloudStack handlers
+  #
+  handlers:  
+
+    # NTP restart
+    - name: restart ntp
+      service: name=ntpd state=restarted
+
+    # Iptables restart
+    - name: restart iptables
+      service: name=iptables state=restarted
+
+    # Save iptables
+    - name: save iptables
+      shell: /sbin/service iptables save
+      notify: restart iptables
+</code></pre><h3 id="related-files">Related Files</h3>
+<p>templates/45CSC6Manage.repo.j2:    </p>
+<pre><code># cat 45CSC6Manage.repo.j2
+[cloudstack]
+name=cloudstack
+baseurl=http://10.15.33.2/repo/45CSC6Manage
+enabled=1
+gpgcheck=0
+</code></pre><p>templates/ntp.conf.j2:    </p>
+<pre><code># cat ntp.conf.j2 
+# Ansible configured ntp.conf file.
+# {{ ansible_managed }}
+#
+driftfile /var/lib/ntp/drift
+
+restrict default kod nomodify notrap nopeer noquery
+restrict -6 default kod nomodify notrap nopeer noquery
+
+restrict 127.0.0.1 
+restrict -6 ::1
+
+{% for ntp_host in NTPServers %}
+server {{ ntp_host }} iburst
+{% endfor %}
+
+includefile /etc/ntp/crypto/pw
+
+keys /etc/ntp/keys
+
+disable monitor
+</code></pre><p>templates/root/.my.cnf:    </p>
+<pre><code># cat root/.my.cnf
+[client]
+user=root
+password=
+
+[mysql]
+user=root
+password=
+
+[mysqldump]
+user=root
+password=
+
+[mysqldiff]
+user=root
+password=
+</code></pre><h3 id="end-of-the-section">End Of The Section</h3>
+<p>Won&apos;t talk too much on Ansible playbooks, just continue for next chapter for deploying CS Agent.    </p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter6/section6.2.html" class="navigation navigation-prev " aria-label="Previous page: Deploy CS Management"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter6/section6.4.html" class="navigation navigation-next " aria-label="Next page: Deploy CS Agent"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

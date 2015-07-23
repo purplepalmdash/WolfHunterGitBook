@@ -1,0 +1,11 @@
+## Combine Cobbler And Ansible
+One-Click Deployment is always the dream for maintainer, thus in this chapter we will do a try for combining Cobbler and Ansible.  
+
+The main goal is to implement a one-click deployment environment, this environment combines Cobbler And Ansible-playbooks. Use the pre-defined configuration we could quickly deploy the management/agent role in one empty machine.   
+
+### Content List
+The content in this chapter include: 
+* Cobbler API
+* Ansible And Python
+* Python Web FrameWork
+* ...
