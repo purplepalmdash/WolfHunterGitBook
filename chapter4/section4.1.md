@@ -11,7 +11,7 @@ Network: Inner+External
 
 #### Add External Network
 We use the WolfHunterFirstNode machine, first we power down this machine, add the second ethernet card.    
-![/images/2015_07_21_14_09_27_631x238.jpg](/images/2015_07_21_14_09_27_631x238.jpg)   
+![../images/2015_07_21_14_09_27_631x238.jpg](../images/2015_07_21_14_09_27_631x238.jpg)   
 Power on this machine again. The newly added ethernet could not get the ip address, because we didn't set it in sysconfig, edit its configuration.     
 
 ```
@@ -106,10 +106,10 @@ Network: Inner+External
 CloudStack Agent Node runs on CentOS7.1, thus we created a new kvm machine, as we described in chapter 2( 2.4 Deploy Your First Node). 
 
 This node need the CPU support kvm acceleration, so when creating the kvm machine, we setup the CPU parameter like following.   
-![/images/2015_07_21_14_36_36_604x443.jpg](/images/2015_07_21_14_36_36_604x443.jpg)   
+![../images/2015_07_21_14_36_36_604x443.jpg](../images/2015_07_21_14_36_36_604x443.jpg)   
 
 In PXE menu, select CentOS7.1 related item:    
-![/images/2015_07_21_14_40_20_545x291.jpg](/images/2015_07_21_14_40_20_545x291.jpg)    
+![../images/2015_07_21_14_40_20_545x291.jpg](../images/2015_07_21_14_40_20_545x291.jpg)    
 
 Press enter and waiting for installation finished.  
 

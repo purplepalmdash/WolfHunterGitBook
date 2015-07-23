@@ -18,10 +18,10 @@ Create a new virtual machine, following steps:
 
 ### Node Installation
 Now bootup the virtual machine, you will see following menu(PXE Menu):    
-![/images/2015_07_20_19_47_34_413x202.jpg](/images/2015_07_20_19_47_34_413x202.jpg)   
+![../images/2015_07_20_19_47_34_413x202.jpg](../images/2015_07_20_19_47_34_413x202.jpg)   
 
 Choose `CentOS-6.5-x86_64`, now the installation will be continue.  
-![/images/2015_07_20_19_49_39_550x300.jpg](/images/2015_07_20_19_49_39_550x300.jpg)   
+![../images/2015_07_20_19_49_39_550x300.jpg](../images/2015_07_20_19_49_39_550x300.jpg)   
 
 All you want to do is drink a coffee, and wait to see the deployment finished.   
 

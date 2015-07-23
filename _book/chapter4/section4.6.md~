@@ -66,4 +66,4 @@ Hit Launch , and you will see zone/pod created, host has been added into cluster
 ![/images/2015_07_22_11_55_16_687x475.jpg](/images/2015_07_22_11_55_16_687x475.jpg)    
 
 ### End Of The Section
-
+Now the cloudstack manually deployment finished, in next section we will discuss on how to use CloudMonkey for automatically create zone/pod/cluster.   

@@ -4,19 +4,19 @@ Before we using PXE Server for deploying systems, deployment content should be f
 ### Import CentOS7.1
 First you should download the CentOS7.1 DVD to local disk, then follow steps for importing it into Cobble Server:   
 
-1. Mount it to specified directory:  
+1\. Mount it to specified directory:  
 
 ```
 # mount -t iso9660 -o loop ./CentOS-7-x86_64-Everything-1503-01.iso /mnt1/
 ```
 
-2. Import it to Cobbler Server, and specify its profile name:   
+2\. Import it to Cobbler Server, and specify its profile name:   
 
 ```
 # cobbler import --name=CentOS-7.1 --arch=x86_64 --path=/mnt
 ```
 
-3. Check the import result via:   
+3\. Check the import result via:   
 
 ```
 # cobbler profile list
@@ -32,20 +32,20 @@ You can also the result in the Cobbler Web backend:
 ### Import CentOS6.5
 CentOS6.5 has 2 DVDs, so we import them using following steps:    
 
-1. Mount 2 DVDs to different directories:   
+1\. Mount 2 DVDs to different directories:   
 
 ```
 # mount -t iso9660 -o loop ./CentOS-6.5-x86_64-bin-DVD1.iso /mnt1/
 # mount -t iso9660 -o loop ./CentOS-6.5-x86_64-bin-DVD2.iso /mnt2/
 ```  
 
-2. First import DVD1 into Cobbler:    
+2\. First import DVD1 into Cobbler:    
 
 ```
 # cobbler import --name=CentOS-6.5 --arch=x86_64 --path=/mnt
 ```
 
-3. Use following commands for importing the second DVD:     
+3\. Use following commands for importing the second DVD:     
 
 ```
 # rsync -a '/mnt2/' /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64/ --exclude-from=/etc/cobbler/rsync.exclude --progress
@@ -53,7 +53,7 @@ CentOS6.5 has 2 DVDs, so we import them using following steps:
 # createrepo -c cache -s sha --update --groupfile ${COMPSXML} /var/www/cobbler/ks_mirror/CentOS-6.5-x86_64
 ```
 
-4. Check the result now you could see:  
+4\. Check the result now you could see:  
 
 ```
 # cobbler profile list

@@ -27,7 +27,7 @@ CentOS-7.1-x86_64
 
 You can also the result in the Cobbler Web backend:   
 
-![/images/2015_07_20_19_21_32_574x258.jpg](/images/2015_07_20_19_21_32_574x258.jpg)  
+![../images/2015_07_20_19_21_32_574x258.jpg](../images/2015_07_20_19_21_32_574x258.jpg)  
 
 ### Import CentOS6.5
 CentOS6.5 has 2 DVDs, so we import them using following steps:    

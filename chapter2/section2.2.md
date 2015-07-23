@@ -10,7 +10,7 @@ Change the default login password of cobbler web:
 # service cobblerd restart 
 ```
 Now login to cobbler web using your modified password, you will see following pages:    
-![/images/2015_07_20_19_04_25_467x244.jpg](/images/2015_07_20_19_04_25_467x244.jpg)    
+![../images/2015_07_20_19_04_25_467x244.jpg](../images/2015_07_20_19_04_25_467x244.jpg)    
 
 In the Cobbler Web Backend you could do many operations, such as import DVDs, managing profiles/distros, etc.    
 

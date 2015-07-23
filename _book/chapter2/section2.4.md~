@@ -1,4 +1,4 @@
-## Deploy First Node
+## Deploy Your First Node
 In this chapter we will use our Cobbler Server for deploying the first node. This node only have the basic configuration(CPU/Mem/Disk) at the very beginning, and it boots from PXE, using the PXE Server's kickstart file finally it will become a workable CentOS node.   
 
 ### Node Preparation

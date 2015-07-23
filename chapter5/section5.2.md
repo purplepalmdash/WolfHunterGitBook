@@ -35,7 +35,7 @@ By adding this you could enable the indexes of the folder via httpd.
 
 Now Copy the repo/ folder under /var/www/html, open a browser and visit `http://10.15.33.2/repo/`, you will found the repo listed info:    
 
-![/images/2015_07_22_14_45_58_704x321.jpg](/images/2015_07_22_14_45_58_704x321.jpg)   
+![../images/2015_07_22_14_45_58_704x321.jpg](../images/2015_07_22_14_45_58_704x321.jpg)   
  
 ### End Of The Section
 In this section we have set the local repository which holds all of the installation files, using these files we could easily setup the new nodes in isolated networking environment, so in next section we will use this new repository for deploying a new Mgmt/Agent for testing.    

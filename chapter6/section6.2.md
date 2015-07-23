@@ -48,7 +48,7 @@ ok: [10.15.33.112]
 ```
 
 Once deployment finished, the cloudstack management node is listed as:    
-![/images/2015_07_22_18_21_34_802x475.jpg](/images/2015_07_22_18_21_34_802x475.jpg)   
+![../images/2015_07_22_18_21_34_802x475.jpg](../images/2015_07_22_18_21_34_802x475.jpg)   
 
 ### End Of The Section
 By using Ansible for deploying CloudStack is pretty easy, in next section we will display all of the playbooks content.     
